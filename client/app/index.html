@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <title translate>Ark Client</title>
+    <title translate>BLOCKPOOL Client</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +13,8 @@
     <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css"/>
     <link href="../node_modules/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="assets/app.css"/>
-
     <style type="text/css">
-        html, body { background-color: #000 }
+        html, body { background-color: #000 ; background-image: url("assets/img/images/blockpool.jpg");background-size: cover;}
         html { border-radius: 10px; }
 
         /**
@@ -31,7 +30,7 @@
   <body style="background:{{ul.network.background}};background-position:center" ng-style="ul.network.background.match('textures') ? {'background-repeat': 'repeat'} : {'background-size': 'cover'}" id="app" ng-app="arkApp" layout="column" ng-controller="AccountController as ul" ng-cloak>
     <md-toolbar style="background-color: rgba(0, 0, 0, 0);">
        <div class="md-toolbar-tools" style="-webkit-app-region: drag;">
-         <img src="ark.png" alt="" height="30">
+         <img src="../BLOCKPOOL_circles_transparency.png"; style="height:20px">
          <md-button ng-click="ul.selected?ul.selected=null:ul.selected=ul.accounts[0]">{{ul.network.token}} <translate>Client</translate> - {{ul.clientVersion}}</md-button>
          <md-button ng-if="ul.clientVersion!=ul.latestClientVersion" onclick='require("electron").shell.openExternal("https://github.com/ArkEcosystem/ark-desktop/releases")' md-colors="{background:'green'}" aria-label="New version available!"><translate>New version available!</translate></md-button>
          <md-button ng-if="ul.selected" class="menu" hide-gt-md ng-click="ul.toggleList()" aria-label="Show Account List">
@@ -234,7 +233,7 @@
            <!--<iframe src="clock.html" style="border:0;width:100%;opacity:0.8;left:50px;right:50px;"></iframe>-->
 
            <div class="footer">
-             <translate>Hand crafted with ❤ by</translate> <a href="#" onclick='require("electron").shell.openExternal("https://ark.io")'>Ark</a>
+             <translate>Hand crafted with ❤ by</translate> <a href="#" onclick='require("electron").shell.openExternal("https://blockpool.io")'>Blockpool</a>
            </div>
       </div>
 
@@ -381,17 +380,17 @@
                 <md-card flex="50">
                   <md-toolbar>
                     <h2 class="md-toolbar-tools">
-                      <span><translate>Deposit ARK</translate> - {{(1/ul.buycoin.rate).toFixed(5)}} {{ul.selectedCoin.split("_")[1]}}</span>
+                      <span><translate>Deposit BPL</translate> - {{(1/ul.buycoin.rate).toFixed(5)}} {{ul.selectedCoin.split("_")[1]}}</span>
                     </h2>
                   </md-toolbar>
                   <md-list ng-if="!ul.exchangeBuy">
                     <md-list-item>
-                      <translate>Minimum:</translate>&nbsp;{{(ul.buycoin.limits.min_amount*ul.buycoin.rate).toFixed(1)}} ARK &nbsp;
-                      <translate>Maximum:</translate>&nbsp;{{(ul.buycoin.limits.max_amount*ul.buycoin.rate).toFixed(1)}} ARK
+                      <translate>Minimum:</translate>&nbsp;{{(ul.buycoin.limits.min_amount*ul.buycoin.rate).toFixed(1)}} BPL &nbsp;
+                      <translate>Maximum:</translate>&nbsp;{{(ul.buycoin.limits.max_amount*ul.buycoin.rate).toFixed(1)}} BPL
                     </md-list-item>
                     <md-list-item>
                       <md-input-container>
-                        <label>{{'Amount'|translate}} (ARK)</label>
+                        <label>{{'Amount'|translate}} (BPL)</label>
                         <input  ng-model="ul.buyAmount" min="{{(ul.buycoin.limits.min_amount*ul.buycoin.rate).toFixed(1)}}" max="{{(ul.buycoin.limits.max_amount*ul.buycoin.rate).toFixed(1)}}" type="number">
                       </md-input-container>
 
@@ -407,7 +406,7 @@
                       <b class="md-secondary">{{ul.exchangeBuy.payee}}</b>
                     </md-list-item>
                     <md-list-item>
-                      <translate>Receive</translate> {{ul.exchangeBuy.receive_amount}} ARK <translate>to</translate>
+                      <translate>Receive</translate> {{ul.exchangeBuy.receive_amount}} BPL <translate>to</translate>
                     </md-list-item>
                     <md-list-item>
                       <b class="md-secondary">{{ul.exchangeBuy.receiver_id}}</b>
@@ -441,18 +440,18 @@
                 <md-card flex="50">
                   <md-toolbar>
                     <h2 class="md-toolbar-tools">
-                      <span><translate>Withdraw ARK</translate> - {{ul.sellcoin.rate.toFixed(5)}} {{ul.selectedCoin.split("_")[1]}} </span>
+                      <span><translate>Withdraw BPL</translate> - {{ul.sellcoin.rate.toFixed(5)}} {{ul.selectedCoin.split("_")[1]}} </span>
                     </h2>
                   </md-toolbar>
                     <md-card-title ng-if="!ul.selected.virtual"><translate>Please login with your account before using this feature</translate></md-card-title>
                     <md-list ng-if="!ul.exchangeSell&&ul.selected.virtual">
                       <md-list-item>
-                        <translate>Minimum:</translate>&nbsp;{{(ul.sellcoin.limits.min_amount).toFixed(1)}} ARK &nbsp;
-                        <translate>Maximum:</translate>&nbsp;{{(ul.sellcoin.limits.max_amount).toFixed(1)}} ARK
+                        <translate>Minimum:</translate>&nbsp;{{(ul.sellcoin.limits.min_amount).toFixed(1)}} BPL &nbsp;
+                        <translate>Maximum:</translate>&nbsp;{{(ul.sellcoin.limits.max_amount).toFixed(1)}} BPL
                       </md-list-item>
                       <md-list-item>
                         <md-input-container>
-                          <label>{{'Amount'|translate}} (ARK)</label>
+                          <label>{{'Amount'|translate}} (BPL)</label>
                           <input ng-model="ul.sellAmount" min="{{(ul.sellcoin.limits.min_amount).toFixed(1)}}" max="{{(ul.sellcoin.limits.max_amount).toFixed(1)}}" type="number">
                         </md-input-container>
                       </md-list-item>
@@ -481,7 +480,7 @@
 
                     <md-list ng-if="ul.exchangeSell&&ul.selected.virtual">
                       <md-list-item>
-                        <translate>Send</translate> {{ul.exchangeSell.send_amount}} ARK <translate>to</translate>
+                        <translate>Send</translate> {{ul.exchangeSell.send_amount}} BPL <translate>to</translate>
                       </md-list-item>
                       <md-list-item>
                         <b class="md-secondary">{{ul.exchangeSell.payee}}</b>
@@ -505,7 +504,7 @@
 
                     <md-card-footer>
                       <md-button ng-if="ul.selected.virtual&&!ul.exchangeSell" ng-click="ul.sell()" md-colors="{'background':'red'}"><translate>Next...</translate></md-button>
-                      <md-button ng-if="ul.selected.virtual&&ul.exchangeSell&&!ul.exchangeSell.sentTransaction" md-colors="{background:'red'}" ng-click="ul.exchangeArkNow(ul.exchangeSellTransaction)"><translate>Send</translate> {{ul.exchangeSell.send_amount}}ARK <translate>now!</translate></md-button>
+                      <md-button ng-if="ul.selected.virtual&&ul.exchangeSell&&!ul.exchangeSell.sentTransaction" md-colors="{background:'red'}" ng-click="ul.exchangeArkNow(ul.exchangeSellTransaction)"><translate>Send</translate> {{ul.exchangeSell.send_amount}}BPL <translate>now!</translate></md-button>
                       <md-button ng-if="ul.selected.virtual&&ul.exchangeSell&&!ul.exchangeSell.sentTransaction" ng-click="ul.cancelExchange()"><translate>Cancel</translate></md-button>
                       <md-button ng-if="!ul.selected.virtual" md-colors="{background:'green'}" ng-click="ul.createFolder(ul.selected)"><translate>Login</translate></md-button>
                     </md-card-footer>
@@ -612,7 +611,7 @@
               </md-table-container>
 
               <md-content id="vote-help" translate>
-                Voting is an optional, but important mechanism that keeps the Ark network secure.
+                Voting is an optional, but important mechanism that keeps the Blockpool network secure.
                 The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.
                 This page can be used to cast your vote for a delegate that you support.
               </md-content>
@@ -675,7 +674,7 @@
                   </div>
                   <span class="md-secondary">
                     <md-input-container>
-                      <label>{{'Amount'|translate}} (ARK)</label>
+                      <label>{{'Amount'|translate}} (BPL)</label>
                       <input ng-model-options="{ getterSetter: true }" ng-model="ul.selected.virtual.uservalue(folder)" ng-change="ul.saveFolder(ul.selected,folder)" type="number" >
                       <div class="hint"> {{ul.currency.symbol}} {{(ul.selected.virtual[folder].amount/100000000*ul.connectedPeer.market.price[ul.currency.name]).toFixed(4)}} </div>
                     </md-input-container>

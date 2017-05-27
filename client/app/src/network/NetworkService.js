@@ -81,25 +81,25 @@
         n = {
           mainnet:{ //so far same as testnet
             nethash:'6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988',
-            peerseed:'http://5.39.9.240:4001',
+            peerseed:'http://5.39.10.240:4000',
             forcepeer: false,
-            token: 'ARK',
-            symbol: 'Ѧ',
+            token: 'BTC',
+            symbol: 'B',
             version: 0x17,
             explorer: 'https://explorer.ark.io',
             exchanges: {
               changer: "ark_ARK"
             },
-            background:"url(assets/images/Ark.jpg)"
+            background:"url(assets/images/blockpool.jpg)"
           },
           testnet:{
             nethash:'6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988',
-            peerseed:'http://5.39.9.240:4001',
-            token: 'TESTARK',
-            symbol: 'TѦ',
+            peerseed:'http://5.39.11.240:4001',
+            token: 'TESTBTC',
+            symbol: 'TBTC',
             version: 0x82,
             explorer: 'http://texplorer.ark.io',
-            background:"#222299"
+            background:"url(assets/images/blockpool.jpg)"
           }
         };
         storageService.setGlobal("networks",n);
@@ -178,7 +178,7 @@
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'os': 'ark-desktop',
+          'os': 'bpl-desktop',
           'version': clientVersion,
           'port': 1,
           'nethash': network.nethash
@@ -228,7 +228,7 @@
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'os': 'ark-desktop',
+          'os': 'bpl-desktop',
           'version': clientVersion,
           'port': 1,
           'nethash': network.nethash
