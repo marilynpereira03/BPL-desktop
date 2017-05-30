@@ -14,10 +14,10 @@
    */
   function AccountService($q, $http, networkService, storageService, gettextCatalog){
 
-    var ark=require('arkjs');
+    var bpl=require('arkjs');
 
     var TxTypes = {
-      0:"Send Ark",
+      0:"Send Bpl",
       1:"Second Signature Creation",
       2:"Delegate Registration",
       3:"Vote",
@@ -138,7 +138,7 @@
 
     function createAccount(passphrase){
       var deferred = $q.defer();
-      var address=ark.crypto.getAddress(ark.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version);
+      var address=bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version);
       var account=fetchAccount(address).then(function(account){
         if(account){
           account.virtual=account.virtual || {};
@@ -154,7 +154,7 @@
 
     function savePassphrases(address, passphrase, secondpassphrase){
       var deferred = $q.defer();
-      var tempaddress = ark.crypto.getAddress(ark.crypto.getKeys(passphrase).publicKey);
+      var tempaddress = bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey);
       if(passphrase){
         var account=getAccount(tempaddress);
         if(account && account.address == address){
@@ -342,9 +342,9 @@
 
     function createTransaction(type,config){
       var deferred = $q.defer();
-      if(type==0){ //send ark
+      if(type==0){ //send bpl
         var isAddress = /^[1-9A-Za-z]+$/g;
-        if(!ark.crypto.validateAddress(config.toAddress, networkService.getNetwork().version)){
+        if(!bpl.crypto.validateAddress(config.toAddress, networkService.getNetwork().version)){
           deferred.reject(gettextCatalog.getString("The destination address ")+config.toAddress+gettextCatalog.getString(" is erroneous"));
           return deferred.promise;
         }
@@ -356,14 +356,14 @@
         }
 
         try{
-          var transaction=ark.transaction.createTransaction(config.toAddress, config.amount, config.smartbridge, config.masterpassphrase, config.secondpassphrase);
+          var transaction=bpl.transaction.createTransaction(config.toAddress, config.amount, config.smartbridge, config.masterpassphrase, config.secondpassphrase);
         }
         catch(e){
           deferred.reject(e);
           return deferred.promise;
         }
 
-        if(ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
+        if(bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
           deferred.reject(gettextCatalog.getString("Passphrase is not corresponding to account ")+config.fromAddress);
           return deferred.promise;
         }
@@ -379,13 +379,13 @@
           return deferred.promise;
         }
         try{
-          var transaction=ark.signature.createSignature(config.masterpassphrase, config.secondpassphrase);
+          var transaction=bpl.signature.createSignature(config.masterpassphrase, config.secondpassphrase);
         }
         catch(e){
           deferred.reject(e);
           return deferred.promise;
         }
-        if(ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
+        if(bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
           deferred.reject(gettextCatalog.getString("Passphrase is not corresponding to account ")+config.fromAddress);
           return deferred.promise;
         }
@@ -400,13 +400,13 @@
           return deferred.promise;
         }
         try{
-          var transaction=ark.delegate.createDelegate(config.masterpassphrase, config.username, config.secondpassphrase);
+          var transaction=bpl.delegate.createDelegate(config.masterpassphrase, config.username, config.secondpassphrase);
         }
         catch(e){
           deferred.reject(e);
           return deferred.promise;
         }
-        if(ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
+        if(bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
           deferred.reject(gettextCatalog.getString("Passphrase is not corresponding to account ")+config.fromAddress);
           return deferred.promise;
         }
@@ -421,13 +421,13 @@
           return deferred.promise;
         }
         try{
-          var transaction=ark.vote.createVote(config.masterpassphrase, config.publicKeys.split(","), config.secondpassphrase);
+          var transaction=bpl.vote.createVote(config.masterpassphrase, config.publicKeys.split(","), config.secondpassphrase);
         }
         catch(e){
           deferred.reject(e);
           return deferred.promise;
         }
-        if(ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
+        if(bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version)!=config.fromAddress){
           deferred.reject(gettextCatalog.getString("Passphrase is not corresponding to account ")+config.fromAddress);
           return deferred.promise;
         }
@@ -531,7 +531,7 @@
 
     function createVirtual(passphrase){
       var deferred = $q.defer();
-      var address=ark.crypto.getAddress(ark.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version);
+      var address=bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version);
       var account=getAccount(address);
       if(account){
         account.virtual=account.virtual || {};

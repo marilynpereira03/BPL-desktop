@@ -145,7 +145,8 @@
     self.createAccount = createAccount;
     self.importAccount = importAccount;
     self.toggleList   = toggleAccountsList;
-    self.sendArk  = sendArk;
+    //changes Raj
+    self.sendBpl  = sendBpl;
     self.createSecondPassphrase  = createSecondPassphrase;
     self.copiedToClipboard  = copiedToClipboard;
 
@@ -391,7 +392,7 @@
 
     }
 
-    self.exchangeArkNow=function(transaction){
+    self.exchangeBplNow=function(transaction){
       networkService.postTransaction(transaction).then(
         function(transaction){
           self.exchangeSell.sentTransaction=transaction;
@@ -917,7 +918,7 @@
       });
     };
 
-    function sendArk(selectedAccount){
+    function sendBpl(selectedAccount){
       var passphrases = accountService.getPassphrases(selectedAccount.address);
       var data={
         fromAddress: selectedAccount ? selectedAccount.address: '',
@@ -947,7 +948,7 @@
       }
 
       function next() {
-        if (!$scope.sendArkForm.$valid){
+        if (!$scope.sendBplForm.$valid){
           return ;
         }
 
@@ -1000,7 +1001,7 @@
 
       $mdDialog.show({
         parent             : angular.element(document.getElementById('app')),
-        templateUrl        : './src/accounts/view/sendArk.html',
+        templateUrl        : './src/accounts/view/sendBpl.html',
         clickOutsideToClose: false,
         preserveScope: true,
         scope: $scope
@@ -1456,7 +1457,7 @@
         }
 
         else if(action==gettextCatalog.getString("Send Bpl")){
-          sendArk();
+          sendBpl();
         }
 
         else if(action==gettextCatalog.getString("Register Delegate")){

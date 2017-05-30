@@ -1,7 +1,7 @@
 {
   "name": "BlockpoolClient",
   "version": "1.2.2",
-  "productName": "BlockpoolClient",
+  "productName": "Blockpool Desktop",
   "description": "Blockpool Desktop",
   "main": "main.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fix/ark-desktop.git"
+    "url": "git+https://ggithub.com/blockpool-io/BPL-desktop.git"
   },
   "keywords": [
     "Electron",
@@ -26,9 +26,9 @@
     "Client"
   ],
   "author": {
-    "name": "Fx Thoorens",
-    "email": "fixcrypt@gmail.com",
-    "url": "https://github.com/fix"
+    "name": "Raj",
+    "email": "cyrus19901@gmail.com",
+    "url": "https://github.com/cyrus19901"
   },
   "contributors": [
     {
@@ -39,9 +39,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fix/ark-desktop/issues"
+    "url": "https://github.com/blockpool-io/BPL-desktop/issues"
   },
-  "homepage": "https://github.com/fix/ark-desktop#readme",
+  "homepage": "https://github.com/blockpool-io/BPL-desktop",
   "devDependencies": {
     "electron": "^1.4.15",
     "electron-builder": "^12.3.1",
@@ -60,7 +60,7 @@
       "iconUrl": "https://ark.io/i/mediakit/icon_1.png"
     },
     "linux": {
-      "synopsis": "A Lite Client used to securely connect to the Ark network and manage your Ark assets.",
+      "synopsis": "A Lite Client used to securely connect to the BPL network and manage your BPL assets.",
       "description": ""
     }
   }
