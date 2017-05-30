@@ -26,8 +26,7 @@ If you login to your account (with your passphrase)
 Second signature supported. Multisignature accounts not yet supported.
 
 ## Screenshots
-![linux](https://ibb.co/gUi2ca)
-![linux](https://ibb.co/gUi2ca)
+![alt text](https://ibb.co/gUi2ca)
 
 ## From code
 
