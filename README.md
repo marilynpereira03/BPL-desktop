@@ -1,7 +1,7 @@
 # Multi Platform Ark Lite Client
 
 ## Download
-[Latest Release](https://github.com/ArkEcosystem/ark-desktop/releases)
+[Latest Release](https://github.com/blockpool-io/BPL-desktop)
 
 ## Features
 * Available on ***Windows***, ***Linux*** (ubuntu/debian) and ***Macosx*** (signed)
@@ -26,8 +26,8 @@ If you login to your account (with your passphrase)
 Second signature supported. Multisignature accounts not yet supported.
 
 ## Screenshots
-![linux](http://i.imgur.com/P9TTXyY.png)
-![linux](http://i.imgur.com/CQ4ms4H.png)
+![linux](https://ibb.co/gUi2ca)
+![linux](https://ibb.co/gUi2ca)
 
 ## From code
 
