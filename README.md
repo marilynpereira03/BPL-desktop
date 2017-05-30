@@ -1,4 +1,4 @@
-# Multi Platform Bpl Lite Client
+# Multi Platform Bpl Lite Wallet
 
 ## Download
 [Latest Release](https://github.com/blockpool-io/BPL-desktop)
