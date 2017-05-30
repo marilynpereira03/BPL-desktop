@@ -1,4 +1,4 @@
-# Multi Platform Ark Lite Client
+# Multi Platform Bpl Lite Client
 
 ## Download
 [Latest Release](https://github.com/blockpool-io/BPL-desktop)
@@ -7,7 +7,7 @@
 * Available on ***Windows***, ***Linux*** (ubuntu/debian) and ***Macosx*** (signed)
 * No wait to sync to the network: launch and use.
 * view any account from its address (transactions, delegate status and votes)
-* (soon) deposit ARK using altcoins or USD (via changer.com) - no registration needed
+* (soon) deposit BPL using altcoins or USD (via changer.com) - no registration needed
 * label any account
 * realtime currency value (updated every 5 min) in UsD, Euro, BTC, HKD, JPY, CNY, AuD, CanD, Pound and Rubble
 * autoconnecting to a healthy ark network peer. If the peer is not good any more, automatically find a new one.
@@ -15,7 +15,7 @@
 * easily switch to different network, or private chains
 * customize background
 * isolated processes on Windows and Macosx to prevent from data sniffing or injection.
-* Translations (thanks to the Ark community). Please help contributing
+* Translations (thanks to the Bpl community). Please help contributing
 
 If you login to your account (with your passphrase)
 * (soon) Withdraw to altcoins or USD (via changer.com) - no registration needed
@@ -26,7 +26,7 @@ If you login to your account (with your passphrase)
 Second signature supported. Multisignature accounts not yet supported.
 
 ## Screenshots
-![alt text](https://ibb.co/gUi2ca)
+![alt text](https://s21.postimg.org/oepmffjqf/BPL-_Desktop.png)
 
 ## From code
 
@@ -39,9 +39,9 @@ sudo n 6.9.2
 Install from source:
 ```bash
 # Clone this repository
-git clone https://github.com/ArkEcosystem/ark-desktop
+git clone https://github.com/blockpool-io/BPL-desktop
 # Go into the repository
-cd ark-desktop
+cd BPL-desktop
 # Install dependencies 
 npm install
 ```
