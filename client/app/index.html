@@ -31,7 +31,7 @@
     <md-toolbar style="background-color: rgba(0, 0, 0, 0);">
        <div class="md-toolbar-tools" style="-webkit-app-region: drag;">
          <img src="../BLOCKPOOL_circles_transparency.png"; style="height:20px">
-         <md-button ng-click="ul.selected?ul.selected=null:ul.selected=ul.accounts[0]">{{ul.network.token}} <translate>Client</translate> - {{ul.clientVersion}}</md-button>
+         <md-button ng-click="ul.selected?ul.selected=null:ul.selected=ul.accounts[0]">Blockpool <translate>Client</translate> - {{ul.clientVersion}}</md-button>
          <md-button ng-if="ul.clientVersion!=ul.latestClientVersion" onclick='require("electron").shell.openExternal("https://github.com/ArkEcosystem/ark-desktop/releases")' md-colors="{background:'green'}" aria-label="New version available!"><translate>New version available!</translate></md-button>
          <md-button ng-if="ul.selected" class="menu" hide-gt-md ng-click="ul.toggleList()" aria-label="Show Account List">
            <md-icon md-svg-icon="menu" ></md-icon>

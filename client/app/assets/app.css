@@ -1,6 +1,6 @@
 html, body {
-  font-family: 'Roboto', sans-serif;
-  font-size:14px;
+  font-family: 'Sans Pro', sans-serif;
+  font-size:13px;
   height:100%;
   margin: 0px;
   padding: 0px;
@@ -289,7 +289,7 @@ md-toast.md-error-theme .md-toast-content {
 }
 
 .warning {
-    background-color: #FFFFD9;
+    background-color: lightpink;
     color: red;
     font-weight: 400;
 }

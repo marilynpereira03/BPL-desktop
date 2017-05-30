@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Sans Pro';
   font-weight: 400;
   font-style: normal;
-  src: url('../fonts/Roboto-regular/Roboto-regular.eot');
-  src: url('../fonts/Roboto-regular/Roboto-regular.eot?#iefix') format('embedded-opentype'),
+  src: url('../fonts/Source_Sans_Pro/SourceSansPro-Black.ttf');
+  /*src: url('../fonts/Roboto-regular/Roboto-regular.eot?#iefix') format('embedded-opentype'),
        local('Roboto'),
        local('Roboto-regular'),
        url('../fonts/Roboto-regular/Roboto-regular.woff2') format('woff2'),
        url('../fonts/Roboto-regular/Roboto-regular.woff') format('woff'),
        url('../fonts/Roboto-regular/Roboto-regular.ttf') format('truetype'),
-       url('../fonts/Roboto-regular/Roboto-regular.svg#Roboto') format('svg');
+       url('../fonts/Roboto-regular/Roboto-regular.svg#Roboto') format('svg');*/
 }
 
