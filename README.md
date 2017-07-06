@@ -59,7 +59,7 @@ brew bundle
 ```
 
 ## Authors
-- Raj Singh <rsingh@ark.io>
+- Raj Singh <rsingh@blockpool.io>
 - Brandon Cook <bcook@blockpool.io>
 - FX Thoorens <fx@ark.io>
 - Guillaume Verbal <doweig@ark.io>
