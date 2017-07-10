@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('arkclient')
+  angular.module('bplclient')
          .service('accountService', ['$q', '$http', 'networkService', 'storageService', 'gettextCatalog', AccountService]);
 
   /**
@@ -14,7 +14,7 @@
    */
   function AccountService($q, $http, networkService, storageService, gettextCatalog){
 
-    var bpl=require('arkjs');
+    var bpl=require('bpljs');
 
     var TxTypes = {
       0:"Send Bpl",
