@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('arkclient')
+  angular.module('bplclient')
          .service('networkService', ['$q', '$http', '$timeout', 'storageService', NetworkService]);
 
   /**
@@ -88,17 +88,17 @@
             version: 0x17,
             explorer: 'https://explorer.ark.io',
             exchanges: {
-              changer: "ark_ARK"
+              changer: "bpl_BPL"
             },
             background:"url(assets/images/blockpool.jpg)"
           },
           testnet:{
-            nethash:'6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988',
-            peerseed:'http://5.39.11.240:4001',
+            nethash:'8eec6459a5928387d32b99c7ef22b1fcb26dfd8417fa4875f1d05fde18bb6484',
+            peerseed:'http://54.249.68.234:4000',
             token: 'TESTBTC',
             symbol: 'TBTC',
             version: 0x82,
-            explorer: 'http://texplorer.ark.io',
+            explorer: 'http://bpltestexp.cryptooz.com/delegateMonitor',
             background:"url(assets/images/blockpool.jpg)"
           },
           bpldevnet:{

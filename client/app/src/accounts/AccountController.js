@@ -1,6 +1,6 @@
 (function(){
   angular
-       .module('arkclient')
+       .module('bplclient')
        .controller('AccountController', [
           'accountService', 'networkService', 'storageService', 'changerService', '$mdToast', '$mdSidenav', '$mdBottomSheet', '$timeout', '$interval', '$log', '$mdDialog', '$scope', '$mdMedia', 'gettextCatalog',
           AccountController
