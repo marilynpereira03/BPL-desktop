@@ -14,7 +14,9 @@
    */
   function AccountService($q, $http, networkService, storageService, gettextCatalog){
 
-    var bpl=require('bpljs');
+
+  var bpl=require('bpljs');
+
 
     var TxTypes = {
       0:"Send Bpl",

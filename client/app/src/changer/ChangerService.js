@@ -16,6 +16,7 @@
 
     var history=storageService.get("changer-history") || {};
 
+
     var bpl="bpl_BPL";
 
     var coins=[

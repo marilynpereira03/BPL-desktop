@@ -105,7 +105,7 @@
             nethash:'1a418de02c68c4353d932a9568be28be20b7b9a86fcf9b653482b4f3f42a6302',
             peerseed:'http://52.66.184.223:4000',
             forcepeer: false,
-            token: 'BTC',
+            token: 'BPL',
             symbol: 'B',
             version: 0x19,
             explorer: 'http://52.66.184.223:4005',
