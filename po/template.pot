@@ -366,7 +366,7 @@ msgstr ""
 
 #: client/app/index.html:115
 #: client/app/index.html:206
-msgid "Market Cap."
+msgid "MBplet Cap."
 msgstr ""
 
 #: client/app/index.html:133
@@ -719,7 +719,7 @@ msgstr ""
 #: client/app/index.html:614
 msgid ""
 "Voting is an optional, but important mechanism that keeps the BPL network secure.\n"
-"                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n"
+"                The 201 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n"
 "                This page can be used to cast your vote for a delegate that you support."
 msgstr ""
 
