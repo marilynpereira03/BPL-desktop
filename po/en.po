@@ -68,11 +68,11 @@ msgstr "The second passphrase does not match the one you just got."
 msgid "This account already has a second passphrase:"
 msgstr "This account already has a second passphrase:"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
-msgstr "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 201 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgstr "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 201 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
 
-msgid "you need at least 5 ARK to create a second passphrase"
-msgstr "you need at least 5 ARK to create a second passphrase"
+msgid "you need at least 5 Bpl to create a second passphrase"
+msgstr "you need at least 5 Bpl to create a second passphrase"
 
 msgid "Account added!"
 msgstr "Account added!"
@@ -113,8 +113,8 @@ msgstr "Arab"
 msgid "Are you sure?"
 msgstr "Are you sure?"
 
-msgid "Ark Client"
-msgstr "Ark Client"
+msgid "Bpl Client"
+msgstr "Bpl Client"
 
 msgid "Background"
 msgstr "Background"
@@ -281,8 +281,8 @@ msgstr "Login"
 msgid "Manage Networks"
 msgstr "Manage Networks"
 
-msgid "Market Cap."
-msgstr "Market Cap."
+msgid "MBplet Cap."
+msgstr "MBplet Cap."
 
 msgid "Maximize"
 msgstr "Maximize"
@@ -317,8 +317,8 @@ msgstr "No publicKey"
 msgid "No search term"
 msgstr "No search term"
 
-msgid "Not enough ARK on your account"
-msgstr "Not enough ARK on your account"
+msgid "Not enough Bpl on your account"
+msgstr "Not enough Bpl on your account"
 
 msgid "OffChain"
 msgstr "OffChain"
@@ -383,14 +383,14 @@ msgstr "Productivity"
 msgid "Quit"
 msgstr "Quit"
 
-msgid "Quit Ark Client?"
-msgstr "Quit Ark Client?"
+msgid "Quit Bpl Client?"
+msgstr "Quit Bpl Client?"
 
 msgid "Rank"
 msgstr "Rank"
 
-msgid "Receive Ark"
-msgstr "Receive Ark"
+msgid "Receive Bpl"
+msgstr "Receive Bpl"
 
 msgid "Register Delegate"
 msgstr "Register Delegate"
@@ -428,11 +428,11 @@ msgstr "Seed Server"
 msgid "Send"
 msgstr "Send"
 
-msgid "Send Ark"
-msgstr "Send Ark"
+msgid "Send Bpl"
+msgstr "Send Bpl"
 
-msgid "Send Ark from"
-msgstr "Send Ark from"
+msgid "Send Bpl from"
+msgstr "Send Bpl from"
 
 msgid "Set"
 msgstr "Set"
@@ -524,9 +524,9 @@ msgstr "produced blocks"
 msgid "sent with success!"
 msgstr "sent with success!"
 
-msgid "you need at least 1 ARK to vote"
-msgstr "you need at least 1 ARK to vote"
+msgid "you need at least 1 Bpl to vote"
+msgstr "you need at least 1 Bpl to vote"
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "you need at least 25 ARK to register delegate"
+msgid "you need at least 25 Bpl to register delegate"
+msgstr "you need at least 25 Bpl to register delegate"
 
