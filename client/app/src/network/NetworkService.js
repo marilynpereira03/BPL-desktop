@@ -81,7 +81,7 @@
         n = {
           mainnet:{
             nethash:'7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3',
-            peerseed:'http://13.56.163.57:4000',
+            peerseed:'http://13.56.163.57:4001',
             forcepeer: false,
             token: 'BLOCKPOOL',
             symbol: 'β',
