@@ -39,16 +39,45 @@ sudo n 6.9.2
 Install from source:
 ```bash
 # Clone this repository
-git clone https://github.com/blockpool-io/BPL-desktop
+git clone -b testnet https://github.com/blockpool-io/BPL-desktop
 # Go into the repository
 cd BPL-desktop
 # Install dependencies 
 npm install
 ```
 
-Then start:
-```bash
-npm start
+## Electron
+
+### Start
+
+Start the Electron client.
+
+```
+npm run start
+```
+
+### Windows
+
+Build package for Windows.
+
+```
+npm run dist:win
+```
+
+### Mac OS X
+
+Build package for Mac OS X.
+
+```
+npm run dist:macos
+```
+
+### Linux
+
+Build package for Linux.
+
+```
+npm run dist:linux
 ```
 
 ## Necessary to package from Mac OS X
