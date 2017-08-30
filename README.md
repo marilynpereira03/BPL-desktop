@@ -74,6 +74,12 @@ npm run dist:macos
 
 ### Linux
 
+Install Dependencies.
+
+```
+apt-get install icnsutils graphicsmagick
+```
+
 Build package for Linux.
 
 ```
