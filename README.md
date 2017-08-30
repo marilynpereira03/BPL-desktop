@@ -1,7 +1,7 @@
 # Multi Platform Bpl Lite Wallet
 
 ## Download Windows 10 64 bit
-[Latest Release](http://blockpool.io/Blockpool_Wallets)
+[Latest Release](http://blockpool.io/Blockpool_Wallets/Blockpool Desktop Setup 1.2.2 - Win64.exe)
 
 ## Features
 * Available on ***Windows***, ***Linux*** (ubuntu/debian) and ***Macosx*** (signed)
