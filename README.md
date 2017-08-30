@@ -1,6 +1,6 @@
 # Multi Platform Bpl Lite Wallet
 
-## Download Windows 10 64
+## Download Windows 10 64 bit
 [Latest Release](htts://blockpool.io/Blockpool_Wallets)
 
 ## Features
