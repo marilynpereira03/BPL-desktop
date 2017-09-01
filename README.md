@@ -64,6 +64,12 @@ Build package for Windows.
 npm run dist:win
 ```
 
+Build package for Windows ia32.
+
+```
+npm run dist:win32
+```
+
 ### Mac OS X
 
 Build package for Mac OS X.
