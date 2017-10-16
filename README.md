@@ -1,7 +1,7 @@
 # Multi Platform Bpl Lite Wallet
 
-## Download
-[Latest Release](https://github.com/blockpool-io/BPL-desktop)
+## Download Windows 10 64 bit
+[Latest Release](http://blockpool.io/Blockpool_Wallets/Blockpool_Desktop_Setup_1.2.2-Win64.exe)
 
 ## Features
 * Available on ***Windows***, ***Linux*** (ubuntu/debian) and ***Macosx*** (signed)
@@ -46,9 +46,50 @@ cd BPL-desktop
 npm install
 ```
 
-Then start:
-```bash
-npm start
+## Electron
+
+### Start
+
+Start the Electron client.
+
+```
+npm run start
+```
+
+### Windows
+
+Build package for Windows.
+
+```
+npm run dist:win
+```
+
+Build package for Windows ia32.
+
+```
+npm run dist:win32
+```
+
+### Mac OS X
+
+Build package for Mac OS X.
+
+```
+npm run dist:macos
+```
+
+### Linux
+
+Install Dependencies.
+
+```
+apt-get install icnsutils graphicsmagick
+```
+
+Build package for Linux.
+
+```
+npm run dist:linux
 ```
 
 ## Necessary to package from Mac OS X
