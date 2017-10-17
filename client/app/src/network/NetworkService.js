@@ -81,12 +81,12 @@
         n = {
           mainnet:{
             nethash:'7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3',
-            peerseed:'http://13.56.163.57:4001',
+            peerseed:'http://13.56.163.57:9030',
             forcepeer: false,
             token: 'BLOCKPOOL',
             symbol: 'β',
             version: 0x19,
-            explorer: 'http://13.56.163.57:4002',
+            explorer: 'http://13.56.163.57:9031',
             exchanges: {
               changer: "bpl_BPL"
             },
@@ -94,24 +94,11 @@
           },
           testnet:{
             nethash:'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db',
-            peerseed:'http://52.66.184.223:4000',
-            token: 'TEST_BLOCKPOOL',
+            peerseed:'http://52.66.184.223:9028',
+            token: 'BLOCKPOOL',
             symbol: 'Tβ',
             version: 0x19,
-            explorer: 'http://52.66.184.223:4010',
-            background:"url(assets/images/blockpool.jpg)"
-          },
-          devnet:{
-            nethash:'022293302aa4c24a98f1007645afe2d8b98f34e2c6fbf367c78d0bd389c6264f',
-            peerseed:'http://34.253.216.124:4000',
-            forcepeer: false,
-            token: 'DEV_BLOCKPOOL',
-            symbol: 'Dβ',
-            version: 0x19,
-            explorer: 'http://54.199.172.202:4001',
-            exchanges: {
-              changer: "bpl_BPL"
-            },
+            explorer: 'http://52.66.184.223:9029',
             background:"url(assets/images/blockpool.jpg)"
           }
         };
