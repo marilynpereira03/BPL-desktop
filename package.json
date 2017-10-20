@@ -1,6 +1,6 @@
 {
   "name": "bplclient",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "productName": "Blockpool Desktop",
   "description": "Blockpool Desktop",
   "main": "main.js",
