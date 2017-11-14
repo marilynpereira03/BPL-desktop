@@ -83,7 +83,7 @@
             nethash:'7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3',
             peerseed:'http://13.56.163.57:9030',
             forcepeer: false,
-            token: 'BLOCKPOOL',
+            token: 'BPL',
             symbol: 'β',
             version: 0x19,
             explorer: 'http://13.56.163.57:9031',
@@ -95,7 +95,7 @@
           testnet:{
             nethash:'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db',
             peerseed:'http://52.66.184.223:9028',
-            token: 'BLOCKPOOL',
+            token: 'BPL',
             symbol: 'Tβ',
             version: 0x19,
             explorer: 'http://52.66.184.223:9029',
@@ -118,31 +118,58 @@
       return storageService.getGlobal("networks");
     }
 
-    function getPrice(){
+    // function getPrice(){
+    //   // peer.market={
+    //   //   price: { btc: '0' },
+    //   // };
+    //   // https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=EUR
+    //   $http.get("http://coinmarketcap.northpole.ro/api/v5/"+network.token+".json",{timeout: 2000})
+    //   .then(function(res){
+    //     storageService.set('lastPrice', { market: res.data, date: new Date() }, true);
+    //     peer.market=res.data;
+    //   },function(){
+    //     var lastPrice = storageService.get('lastPrice');
+
+    //     if (typeof lastPrice === 'undefined') {
+    //       peer.market = { price: { btc: "0.0"} };
+    //       return;
+    //     }
+
+    //     peer.market = lastPrice.market;
+    //     peer.market.lastUpdate = lastPrice.date;
+    //     peer.market.isOffline = true;
+    //   });
+    //   $timeout(function(){
+    //     getPrice();
+    //   },5*60000);
+    // }
+    function getPrice () {
       // peer.market={
       //   price: { btc: '0' },
-      // };
-      $http.get("http://coinmarketcap.northpole.ro/api/v5/"+network.token+".json",{timeout: 2000})
-      .then(function(res){
-        storageService.set('lastPrice', { market: res.data, date: new Date() }, true);
-        peer.market=res.data;
-      },function(){
-        var lastPrice = storageService.get('lastPrice');
+      // }
+      $http.get('http://coinmarketcap.northpole.ro/api/v5/' + network.token + '.json', { timeout: 2000 })
+        .then(function (res) {
+          if (res.data.price && res.data.price.btc) {
+            res.data.price.btc = Number(res.data.price.btc).toFixed(8) // store BTC price in satoshi
+          }
+          storageService.set('lastPrice', { market: res.data, date: new Date() }, true)
+          peer.market = res.data
+        }, function () {
+          var lastPrice = storageService.get('lastPrice')
 
-        if (typeof lastPrice === 'undefined') {
-          peer.market = { price: { btc: "0.0"} };
-          return;
-        }
+          if (typeof lastPrice === 'undefined') {
+            peer.market = { price: { btc: '0.0' } }
+            return
+          }
 
-        peer.market = lastPrice.market;
-        peer.market.lastUpdate = lastPrice.date;
-        peer.market.isOffline = true;
-      });
-      $timeout(function(){
-        getPrice();
-      },5*60000);
+          peer.market = lastPrice.market
+          peer.market.lastUpdate = lastPrice.date
+          peer.market.isOffline = true
+        })
+      $timeout(function () {
+        getPrice()
+      }, 5 * 60000)
     }
-
     function listenNetworkHeight(){
       $http.get(peer.ip+"/api/blocks/getheight",{timeout:5000}).then(function(resp){
         peer.lastConnection=new Date();

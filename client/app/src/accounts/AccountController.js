@@ -792,7 +792,7 @@
         $mdDialog.hide();
         accountService.getDelegateByUsername(data.delegatename).then(
           function(delegate){
-            if(self.selected.selectedVotes.length<101 && indexOfDelegates(selectedAccount.selectedVotes,delegate)<0){
+            if(self.selected.selectedVotes.length<201 && indexOfDelegates(selectedAccount.selectedVotes,delegate)<0){
               selectedAccount.selectedVotes.push(delegate);
             }
             else{
@@ -833,7 +833,7 @@
             }
 
             for(var i = 0 ; i<sponsors.length; i++){
-              if(self.selected.selectedVotes.length<101 && indexOfDelegates(selectedAccount.selectedVotes,sponsors[i])<0){
+              if(self.selected.selectedVotes.length<201 && indexOfDelegates(selectedAccount.selectedVotes,sponsors[i])<0){
                 selectedAccount.selectedVotes.push(sponsors[i]);
               }
             }
