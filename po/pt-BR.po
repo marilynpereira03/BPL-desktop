@@ -95,8 +95,8 @@ msgstr "Árabe"
 msgid "Are you sure?"
 msgstr "Você tem certeza?"
 
-msgid "Ark Client"
-msgstr "Cliente Ark"
+msgid "Bpl Client"
+msgstr "Cliente Bpl"
 
 msgid "Background"
 msgstr "Plano de fundo"
@@ -431,8 +431,8 @@ msgstr "Nenhuma chave pública"
 msgid "No search term"
 msgstr "Nenhum termo de pesquisa"
 
-msgid "Not enough ARK on your account"
-msgstr "Não há ARK suficiente em sua conta"
+msgid "Not enough BPL on your account"
+msgstr "Não há BPL suficiente em sua conta"
 
 msgid "OffChain"
 msgstr "OffChain"
@@ -548,14 +548,14 @@ msgstr "Scanner de código QR"
 msgid "Quit"
 msgstr "Sair"
 
-msgid "Quit Ark Client?"
-msgstr "Sair do Cliente Ark?"
+msgid "Quit Bpl Client?"
+msgstr "Sair do Cliente Bpl?"
 
 msgid "Rank"
 msgstr "Rank"
 
-msgid "Receive Ark"
-msgstr "Receber Ark"
+msgid "Receive Bpl"
+msgstr "Receber Bpl"
 
 msgid "Refresh Account"
 msgstr "Atualizar Conta"
@@ -620,14 +620,14 @@ msgstr "Enviar"
 msgid "Send All"
 msgstr "Enviar Tudo"
 
-msgid "Send Ark"
-msgstr "Enviar Ark"
+msgid "Send Bpl"
+msgstr "Enviar Bpl"
 
 msgid "Serbian"
 msgstr "Sérvio"
 
-msgid "Send Ark from"
-msgstr "Enviar Ark de"
+msgid "Send Bpl from"
+msgstr "Enviar Bpl de"
 
 msgid "Set"
 msgstr "Conjunto"
@@ -785,15 +785,15 @@ msgstr "produtividade"
 msgid "sent with success!"
 msgstr "enviado com sucesso!"
 
-msgid "you need at least 1 ARK to vote"
-msgstr "você precisa de pelo menos 1 ARK para votar"
+msgid "you need at least 1 BPL to vote"
+msgstr "você precisa de pelo menos 1 BPL para votar"
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "Você necessita de pelo menos 25 ARK para registrar o delegado "
+msgid "you need at least 25 BPL to register delegate"
+msgstr "Você necessita de pelo menos 25 BPL para registrar o delegado "
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
-msgstr "A votação é um mecanismo opcional, mas importante, que mantém a rede Ark segura.\nOs 51 delegados com mais votos da rede são responsáveis ​​por verificar e forjar transações em novos blocos.\nEsta página pode ser usada para votar para um delegado que você apoia."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgstr "A votação é um mecanismo opcional, mas importante, que mantém a rede Bpl segura.\nOs 51 delegados com mais votos da rede são responsáveis ​​por verificar e forjar transações em novos blocos.\nEsta página pode ser usada para votar para um delegado que você apoia."
 
-msgid "you need at least 5 ARK to create a second passphrase"
-msgstr "Você precisa de pelo menos 5 ARK para criar uma segunda frase secreta"
+msgid "you need at least 5 BPL to create a second passphrase"
+msgstr "Você precisa de pelo menos 5 BPL para criar uma segunda frase secreta"
 

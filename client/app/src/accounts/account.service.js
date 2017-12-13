@@ -14,7 +14,7 @@
    */
   function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, BPLTOSHI_UNIT) {
     var self = this
-    var bpl = require('../node_modules/arkjs')
+    var bpl = require('../node_modules/bpljs')
 
     self.defaultFees = {
       'send': 10000000,

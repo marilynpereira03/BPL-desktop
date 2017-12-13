@@ -10,7 +10,7 @@
    */
   function LedgerService ($q, $http, $timeout, storageService, networkService) {
     var ipcRenderer = require('electron').ipcRenderer
-    var bpljs = require('../node_modules/arkjs')
+    var bpljs = require('../node_modules/bpljs')
     var bip39 = require('../node_modules/bip39')
     var async = require('async')
 

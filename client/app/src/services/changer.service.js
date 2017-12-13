@@ -67,7 +67,8 @@
 
     function request (endpoint, data) { // eslint-disable-line no-unused-vars
       var deferred = $q.defer()
-
+      console.log("inside request");
+      console.log(endpoint);
       $http({
         url: url + endpoint.path,
         method: endpoint.method,

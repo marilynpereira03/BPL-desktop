@@ -1,6 +1,6 @@
 {
   "name": "BPLClient",
-  "version": "1.4.3",
+  "version": "1.2.5",
   "productName": "BPLClient",
   "description": "BPLClient",
   "main": "main.js",
@@ -32,11 +32,16 @@
     "Electron"
   ],
   "author": {
+    "name": "Raj Singh",
+    "email": "rsingh@blockpool.io",
+    "url": "https://github.com/cyrus19901"
+  },
+  "contributors": [
+    {
     "name": "Fx Thoorens",
     "email": "fixcrypt@gmail.com",
     "url": "https://github.com/fix"
-  },
-  "contributors": [
+    },
     {
       "name": "Guillaume Verbal",
       "email": "doweig@ark.io",

@@ -2,7 +2,7 @@ module.exports = {
   themes: {
     'default': {
       primary: 'blue',
-      accent: 'green',
+      accent: 'pink',
       warn: 'red'
     },
     'caetano': {

@@ -110,8 +110,8 @@ msgstr "árabe"
 msgid "Are you sure?"
 msgstr "¿Está seguro?"
 
-msgid "Ark Client"
-msgstr "Cliente Ark"
+msgid "Bpl Client"
+msgstr "Cliente Bpl"
 
 msgid "Background"
 msgstr "Fondo"
@@ -425,8 +425,8 @@ msgstr "No hay clave pública"
 msgid "No search term"
 msgstr "No hay término de búsqueda"
 
-msgid "Not enough ARK on your account"
-msgstr "ARK insuficientes en su cuenta"
+msgid "Not enough BPL on your account"
+msgstr "BPL insuficientes en su cuenta"
 
 msgid "OffChain"
 msgstr "OffChain"
@@ -545,14 +545,14 @@ msgstr "Léctor de códigos QR"
 msgid "Quit"
 msgstr "Salir"
 
-msgid "Quit Ark Client?"
-msgstr "¿Quiere salir del Cliente Ark?"
+msgid "Quit Bpl Client?"
+msgstr "¿Quiere salir del Cliente Bpl?"
 
 msgid "Rank"
 msgstr "Posición"
 
-msgid "Receive Ark"
-msgstr "Recibir Ark"
+msgid "Receive Bpl"
+msgstr "Recibir Bpl"
 
 msgid "Register Delegate"
 msgstr "Registrar Delegado"
@@ -614,14 +614,14 @@ msgstr "Enviar"
 msgid "Send All"
 msgstr "Enviar Todo"
 
-msgid "Send Ark"
-msgstr "Enviar  Ark"
+msgid "Send Bpl"
+msgstr "Enviar  Bpl"
 
 msgid "Serbian"
 msgstr "Serbio"
 
-msgid "Send Ark from"
-msgstr "Enviar Ark desde"
+msgid "Send Bpl from"
+msgstr "Enviar Bpl desde"
 
 msgid "Set"
 msgstr "Establecer"
@@ -761,8 +761,8 @@ msgstr "Voto"
 msgid "Votes"
 msgstr "Votos"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure. The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for\n                a delegate that you support."
-msgstr "La votación es un mecanismo opcional, pero importante, que mantiene segura la red Ark. Los 51 delegados con más votos de la red son responsables de verificar transacciones en nuevos bloques. Esta página puede ser usada para votar por el delegado que usted apoye."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure. The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for\n                a delegate that you support."
+msgstr "La votación es un mecanismo opcional, pero importante, que mantiene segura la red Bpl. Los 51 delegados con más votos de la red son responsables de verificar transacciones en nuevos bloques. Esta página puede ser usada para votar por el delegado que usted apoye."
 
 msgid "Word"
 msgstr "Palabra"
@@ -809,15 +809,15 @@ msgstr "productividad"
 msgid "sent with success!"
 msgstr "¡Enviado exitosamente!"
 
-msgid "you need at least 1 ARK to vote"
-msgstr "necesitas al menos 1 ARK para votar"
+msgid "you need at least 1 BPL to vote"
+msgstr "necesitas al menos 1 BPL para votar"
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "Necesita al menos 25 ARK para registrar delegado"
+msgid "you need at least 25 BPL to register delegate"
+msgstr "Necesita al menos 25 BPL para registrar delegado"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
-msgstr "Votar es opcional pero es un importante mecanismo que mantiene la red ARK segura.\nLos 51 delegados con más votos de la red son responsables de verificar y forjar transacciones en los nuevos bloques.\nEsta página puede utilizarse para votar por un delegado que usted apoye."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgstr "Votar es opcional pero es un importante mecanismo que mantiene la red BPL segura.\nLos 51 delegados con más votos de la red son responsables de verificar y forjar transacciones en los nuevos bloques.\nEsta página puede utilizarse para votar por un delegado que usted apoye."
 
-msgid "you need at least 5 ARK to create a second passphrase"
-msgstr "Necesita al menos 5 ARK para crear una segunda contraseña"
+msgid "you need at least 5 BPL to create a second passphrase"
+msgstr "Necesita al menos 5 BPL para crear una segunda contraseña"
 

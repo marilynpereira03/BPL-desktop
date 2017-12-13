@@ -14,7 +14,7 @@
     if (!network) {
       network = switchNetwork()
     }
-    var bpl = require('../node_modules/arkjs')
+    var bpl = require('../node_modules/bpljs')
     bpl.crypto.setNetworkVersion(network.version || 25)
 
     var clientVersion = require('../../package.json').version
@@ -102,7 +102,7 @@
             exchanges: {
               changer: 'bpl_BPL'
             },
-            background: 'url(assets/images/images/Bpl.jpg)',
+            background: 'url(assets/images/images/BPL_background3.jpg) no-repeat ',
             theme: 'default',
             themeDark: false
           },
@@ -113,8 +113,8 @@
             symbol: 'Tβ',
             version: 0x19,
             slip44: 1, // all coin testnet
-            explorer: 'http://dexplorer.ark.io',
-            background: '#222299',
+            explorer: 'http://52.66.184.223:9029',
+            background: 'url(assets/images/images/BPL_background.jpg)',
             theme: 'default',
             themeDark: false
           }
@@ -149,7 +149,7 @@
         peer.market.isOffline = true
       }
 
-      if (!network.cmcTicker && network.token !== 'blockpool') {
+      if (!network.cmcTicker && network.token !== 'BPL') {
         failedTicker()
         return
       }
@@ -330,7 +330,7 @@
 
     function getLatestClientVersion () {
       var deferred = $q.defer()
-      var url = 'https://api.github.com/repos/blockpool-io/BPL-desktop/releases/latest'
+      var url = 'https://api.github.com/repos/blockpool-io/BPL-desktop'
       $http.get(url, { timeout: 5000 })
         .then(function (res) {
           deferred.resolve(res.data.tag_name)

@@ -1286,7 +1286,7 @@
           darkVibrantRatio[color] = darkVibrantDiff
         })
 
-        var isArkJpg = path.basename(url) === 'Bpl.jpg'
+        var isBplJpg = path.basename(url) === 'Bpl.jpg'
         var primaryColor = isBplJpg ? 'red' : sortObj(darkVibrantRatio)[0]
         var accentColor = sortObj(vibrantRatio)[0]
 

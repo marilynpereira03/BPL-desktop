@@ -104,8 +104,8 @@ msgstr "Arabia"
 msgid "Are you sure?"
 msgstr "Oletko varma?"
 
-msgid "Ark Client"
-msgstr "Ark Asiakasohjelma"
+msgid "Bpl Client"
+msgstr "Bpl Asiakasohjelma"
 
 msgid "Background"
 msgstr "Tausta"
@@ -398,8 +398,8 @@ msgstr "Ei julkistaAvainta"
 msgid "No search term"
 msgstr "Ei hakusanaa"
 
-msgid "Not enough ARK on your account"
-msgstr "Tililläsi ei ole tarpeeksi ARK'ia"
+msgid "Not enough BPL on your account"
+msgstr "Tililläsi ei ole tarpeeksi BPL'ia"
 
 msgid "OffChain"
 msgstr "OffChain"
@@ -486,7 +486,7 @@ msgid "Please restart your client after the delegate registration has been put i
 msgstr "Muutosten voimaanastumista varten ole hyvä ja uudelleenkäynnistä ohjelmisto kun edustajaksi rekisteröintisi on kirjattu lohkoon."
 
 msgid "Please first BACKUP SECURELY THE PASSPHRASE, this client does NOT store it and thus cannot recover your passphrase"
-msgstr "Ole hyvä ja TEE TUNNUSLAUSEESTASI USEAMPI VARMUUSKOPIO ja SÄILYTÄ NIITÄ ERILLÄÄN TURVALLISISSA PAIKOISSA. Tämä ohjelma EI TALLENNA tunnuslausettasi. Hukkunutta tunnuslausetta EI VOIDA PALAUTTAA ARK'in toimesta."
+msgstr "Ole hyvä ja TEE TUNNUSLAUSEESTASI USEAMPI VARMUUSKOPIO ja SÄILYTÄ NIITÄ ERILLÄÄN TURVALLISISSA PAIKOISSA. Tämä ohjelma EI TALLENNA tunnuslausettasi. Hukkunutta tunnuslausetta EI VOIDA PALAUTTAA BPL'in toimesta."
 
 msgid "Please type word 3, 6 and 9 from your passphrase to validate the account creation."
 msgstr "Ole hyvä ja kirjoita tunnuslauseesi sanat 3, 6 ja 9 vahvistaaksesi tilisi luonnin."
@@ -512,14 +512,14 @@ msgstr "QR Skanneri"
 msgid "Quit"
 msgstr "Poistu"
 
-msgid "Quit Ark Client?"
-msgstr "Sulje Ark Pääteohjelma?"
+msgid "Quit Bpl Client?"
+msgstr "Sulje Bpl Pääteohjelma?"
 
 msgid "Rank"
 msgstr "Asema"
 
-msgid "Receive Ark"
-msgstr "Vastaanota Ark'ia"
+msgid "Receive Bpl"
+msgstr "Vastaanota Bpl'ia"
 
 msgid "Register Delegate"
 msgstr "Rekisteröi Edustajaksi"
@@ -581,11 +581,11 @@ msgstr "Lähetä"
 msgid "Send All"
 msgstr "Lähetä Kaikki"
 
-msgid "Send Ark"
-msgstr "Lähetä Ark'ia"
+msgid "Send Bpl"
+msgstr "Lähetä Bpl'ia"
 
-msgid "Send Ark from"
-msgstr "Lähetä Ark'ia ..."
+msgid "Send Bpl from"
+msgstr "Lähetä Bpl'ia ..."
 
 msgid "Set"
 msgstr "Määritä"
@@ -716,8 +716,8 @@ msgstr "Äännestä"
 msgid "Votes"
 msgstr "Äänet"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure. The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for\n                a delegate that you support."
-msgstr "Äänestäminen on valinnainen mutta tärkeä mekanismi, joka pitää Ark-verkon turvattuna. Verkoston 51 eniten ääniä saanutta edustajaa (delegaattia) ovat vastuussa tilitapahtumien tarkastamisesta sekä tapahtumien tallentamisesta uusiin lohkoihin. Tällä sivulla voit antaa äänesi tukemalle edustajallesi."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure. The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for\n                a delegate that you support."
+msgstr "Äänestäminen on valinnainen mutta tärkeä mekanismi, joka pitää Bpl-verkon turvattuna. Verkoston 51 eniten ääniä saanutta edustajaa (delegaattia) ovat vastuussa tilitapahtumien tarkastamisesta sekä tapahtumien tallentamisesta uusiin lohkoihin. Tällä sivulla voit antaa äänesi tukemalle edustajallesi."
 
 msgid "Word"
 msgstr "Sana"
@@ -764,15 +764,15 @@ msgstr "tuottavuus"
 msgid "sent with success!"
 msgstr "lähetetty onnistuneesti!"
 
-msgid "you need at least 1 ARK to vote"
-msgstr "tarvitset vähintään 1.0 ARK'ia äänestääksesi"
+msgid "you need at least 1 BPL to vote"
+msgstr "tarvitset vähintään 1.0 BPL'ia äänestääksesi"
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "tarvitset vähintään 25 ARK'ia rekisteröityäksesi edustajaksi"
+msgid "you need at least 25 BPL to register delegate"
+msgstr "tarvitset vähintään 25 BPL'ia rekisteröityäksesi edustajaksi"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
-msgstr "Äänestäminen on valinnainen mutta tärkeä mekanismi, joka pitää Ark-verkon turvattuna.\nVerkoston 51 eniten ääniä saanutta edustajaa (delegaattia) ovat vastuussa tilitapahtumien tarkastamisesta sekä tapahtumien tallentamisesta uusiin lohkoihin.\nTällä sivulla voit antaa äänesi tukemalle edustajallesi."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgstr "Äänestäminen on valinnainen mutta tärkeä mekanismi, joka pitää Bpl-verkon turvattuna.\nVerkoston 51 eniten ääniä saanutta edustajaa (delegaattia) ovat vastuussa tilitapahtumien tarkastamisesta sekä tapahtumien tallentamisesta uusiin lohkoihin.\nTällä sivulla voit antaa äänesi tukemalle edustajallesi."
 
-msgid "you need at least 5 ARK to create a second passphrase"
-msgstr "tarvitset vähintään 5 ARK'ia luodaksesi toisen tunnuslauseen"
+msgid "you need at least 5 BPL to create a second passphrase"
+msgstr "tarvitset vähintään 5 BPL'ia luodaksesi toisen tunnuslauseen"
 

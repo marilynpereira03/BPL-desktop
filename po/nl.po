@@ -107,8 +107,8 @@ msgstr "Arabisch"
 msgid "Are you sure?"
 msgstr "Weet je het zeker?"
 
-msgid "Ark Client"
-msgstr "Ark client"
+msgid "Bpl Client"
+msgstr "Bpl client"
 
 msgid "Background"
 msgstr "Achtergrond"
@@ -398,8 +398,8 @@ msgstr "Geen publieke sleutel"
 msgid "No search term"
 msgstr "Geen zoekterm"
 
-msgid "Not enough ARK on your account"
-msgstr "Niet genoeg ARK op uw rekening"
+msgid "Not enough BPL on your account"
+msgstr "Niet genoeg BPL op uw rekening"
 
 msgid "OffChain"
 msgstr "OffChain"
@@ -503,14 +503,14 @@ msgstr "QR-scanner"
 msgid "Quit"
 msgstr "Ophouden"
 
-msgid "Quit Ark Client?"
-msgstr "Stoppen Ark Client?"
+msgid "Quit Bpl Client?"
+msgstr "Stoppen Bpl Client?"
 
 msgid "Rank"
 msgstr "Rang"
 
-msgid "Receive Ark"
-msgstr "Ontvang Ark"
+msgid "Receive Bpl"
+msgstr "Ontvang Bpl"
 
 msgid "Register Delegate"
 msgstr "Registreer gedelegeerde "
@@ -572,11 +572,11 @@ msgstr "Sturen"
 msgid "Send All"
 msgstr "Alles versturen"
 
-msgid "Send Ark"
-msgstr "Stuur Ark"
+msgid "Send Bpl"
+msgstr "Stuur Bpl"
 
-msgid "Send Ark from"
-msgstr "Stuur Ark van"
+msgid "Send Bpl from"
+msgstr "Stuur Bpl van"
 
 msgid "Set"
 msgstr "Set"
@@ -749,15 +749,15 @@ msgstr "productiviteit"
 msgid "sent with success!"
 msgstr "Verzonden met succes!"
 
-msgid "you need at least 1 ARK to vote"
-msgstr "U heeft minimaal 1 ARK nodig om te stemmen."
+msgid "you need at least 1 BPL to vote"
+msgstr "U heeft minimaal 1 BPL nodig om te stemmen."
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "U heeft minimaal 25 ARK nodig om delegat te registreren."
+msgid "you need at least 25 BPL to register delegate"
+msgstr "U heeft minimaal 25 BPL nodig om delegat te registreren."
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
-msgstr "Stemmen is optioneel, maar een belangrijk mechanisme wat het Ark netwerk veilig houdt.\nDe 51 gedelegeerden met de meeste stemmen van het netwerk zijn verantwoordelijk voor het verifiëren en het smeden van transacties in nieuwe blokken.\nDeze pagina kan gebruikt worden om uw stem te doen voor de gedelegeerde welke u steunt."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgstr "Stemmen is optioneel, maar een belangrijk mechanisme wat het Bpl netwerk veilig houdt.\nDe 51 gedelegeerden met de meeste stemmen van het netwerk zijn verantwoordelijk voor het verifiëren en het smeden van transacties in nieuwe blokken.\nDeze pagina kan gebruikt worden om uw stem te doen voor de gedelegeerde welke u steunt."
 
-msgid "you need at least 5 ARK to create a second passphrase"
-msgstr "U heeft minimaal 5 ARK nodig om een tweede passphrase aan te maken"
+msgid "you need at least 5 BPL to create a second passphrase"
+msgstr "U heeft minimaal 5 BPL nodig om een tweede passphrase aan te maken"
 

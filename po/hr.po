@@ -101,8 +101,8 @@ msgstr "Arapski"
 msgid "Are you sure?"
 msgstr "Jesi li siguran?"
 
-msgid "Ark Client"
-msgstr "Ark klijent"
+msgid "Bpl Client"
+msgstr "Bpl klijent"
 
 msgid "Background"
 msgstr "Pozadina"
@@ -392,8 +392,8 @@ msgstr "Nema javnog ključa"
 msgid "No search term"
 msgstr "Nema traženog termina"
 
-msgid "Not enough ARK on your account"
-msgstr "Nemate dovoljno ARK-ova na vašem računu"
+msgid "Not enough BPL on your account"
+msgstr "Nemate dovoljno BPL-ova na vašem računu"
 
 msgid "OffChain"
 msgstr "Izvan lanca"
@@ -503,14 +503,14 @@ msgstr "QR čitač"
 msgid "Quit"
 msgstr "Izlaz"
 
-msgid "Quit Ark Client?"
-msgstr "Izađi iz ARK klijenta?"
+msgid "Quit Bpl Client?"
+msgstr "Izađi iz BPL klijenta?"
 
 msgid "Rank"
 msgstr "Mjesto"
 
-msgid "Receive Ark"
-msgstr "Primi Ark"
+msgid "Receive Bpl"
+msgstr "Primi Bpl"
 
 msgid "Register Delegate"
 msgstr "Registriraj delegata"
@@ -572,11 +572,11 @@ msgstr "Pošalji"
 msgid "Send All"
 msgstr "Pošalji sve"
 
-msgid "Send Ark"
-msgstr "Pošalji Ark"
+msgid "Send Bpl"
+msgstr "Pošalji Bpl"
 
-msgid "Send Ark from"
-msgstr "Pošalji Ark iz"
+msgid "Send Bpl from"
+msgstr "Pošalji Bpl iz"
 
 msgid "Set"
 msgstr "Postavi"
@@ -704,8 +704,8 @@ msgstr "Glasaj"
 msgid "Votes"
 msgstr "Glasovi"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure. The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for\n                a delegate that you support."
-msgstr "Glasanje je opcionalno, ali je bitan mehanizam koji osigurava Ark mrežu sigurnom. 51 delegat sa najviše glasova s mreže su odgovorni za potvrđivanje i kovanje transkacija u nove blokove. Ova stranica može biti korištena u svrhu glasanja za delegata kojega podržavaš."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure. The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for\n                a delegate that you support."
+msgstr "Glasanje je opcionalno, ali je bitan mehanizam koji osigurava Bpl mrežu sigurnom. 51 delegat sa najviše glasova s mreže su odgovorni za potvrđivanje i kovanje transkacija u nove blokove. Ova stranica može biti korištena u svrhu glasanja za delegata kojega podržavaš."
 
 msgid "Word"
 msgstr "Riječ"
@@ -752,15 +752,15 @@ msgstr "produktivnost"
 msgid "sent with success!"
 msgstr "uspješno poslano!"
 
-msgid "you need at least 1 ARK to vote"
-msgstr "moraš imati barem 1 ARK za glasanje"
+msgid "you need at least 1 BPL to vote"
+msgstr "moraš imati barem 1 BPL za glasanje"
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "moraš imati barem 25 ARK-ova za registriranje delegata"
+msgid "you need at least 25 BPL to register delegate"
+msgstr "moraš imati barem 25 BPL-ova za registriranje delegata"
 
-msgid "Voting is an optional, but important mechanism that keeps the Ark network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
-msgstr "Glasanje je opcionalno, ali je bitan mehanizam koji osigurava Ark mrežu sigurnom. \n51 delegat sa najviše glasova s mreže su odgovorni za potvrđivanje i kovanje transkacija u nove blokove. \nOva stranica može biti korištena u svrhu glasanja za delegata kojega podržavaš."
+msgid "Voting is an optional, but important mechanism that keeps the Bpl network secure.\n                The 51 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks.\n                This page can be used to cast your vote for a delegate that you support."
+msgstr "Glasanje je opcionalno, ali je bitan mehanizam koji osigurava Bpl mrežu sigurnom. \n51 delegat sa najviše glasova s mreže su odgovorni za potvrđivanje i kovanje transkacija u nove blokove. \nOva stranica može biti korištena u svrhu glasanja za delegata kojega podržavaš."
 
-msgid "you need at least 5 ARK to create a second passphrase"
-msgstr "trebaš minimalno 5 ARK-ova za stvaranje dodatne lozinke"
+msgid "you need at least 5 BPL to create a second passphrase"
+msgstr "trebaš minimalno 5 BPL-ova za stvaranje dodatne lozinke"
 

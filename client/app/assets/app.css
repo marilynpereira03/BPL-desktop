@@ -17,6 +17,10 @@ body {
     width: 12px;
 }
 
+.md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #f4e927 !important;
+    background: #f4e927 !important;
+}
 
 /* Track */
 
@@ -440,7 +444,7 @@ md-autocomplete .md-errors-spacer {
 
 .new-version-button {
     padding: 0 1em;
-    background-color: rgba(38, 151, 200, 0.5);
+    background-color: #1B9CDA;
     font-weight: bold;
     color: white;
 }

@@ -44,8 +44,8 @@ msgstr "Количество (Ѧ)"
 msgid "Are you sure?"
 msgstr "Вы уверены?"
 
-msgid "Ark Client"
-msgstr "Клиент Ark"
+msgid "Bpl Client"
+msgstr "Клиент Bpl"
 
 msgid "Balance"
 msgstr "Баланс"
@@ -194,8 +194,8 @@ msgstr "Нет отличий от оригинального списка де�
 msgid "No publicKey"
 msgstr "Отсутствует Публичный ключ"
 
-msgid "Not enough ARK on your account"
-msgstr "Не хватает ARK на вашем счету"
+msgid "Not enough BPL on your account"
+msgstr "Не хватает BPL на вашем счету"
 
 msgid "Open Delegate Monitor"
 msgstr "Открыть монитор делегатов"
@@ -242,11 +242,11 @@ msgstr "Производительность"
 msgid "Quit"
 msgstr "Выход"
 
-msgid "Quit Ark Client?"
-msgstr "Завершить клиент Ark?"
+msgid "Quit Bpl Client?"
+msgstr "Завершить клиент Bpl?"
 
-msgid "Receive Ark"
-msgstr "Получить Ark"
+msgid "Receive Bpl"
+msgstr "Получить Bpl"
 
 msgid "Remove"
 msgstr "Удалить"
@@ -269,11 +269,11 @@ msgstr "Дополнительный пароль"
 msgid "Send"
 msgstr "Отправить"
 
-msgid "Send Ark"
-msgstr "Отправить Ark"
+msgid "Send Bpl"
+msgstr "Отправить Bpl"
 
-msgid "Send Ark from"
-msgstr "Отправить Ark из"
+msgid "Send Bpl from"
+msgstr "Отправить Bpl из"
 
 msgid "Set"
 msgstr "Установить"
@@ -338,9 +338,9 @@ msgstr "секретная фраза"
 msgid "sent with success!"
 msgstr "отправлено успешно!"
 
-msgid "you need at least 1 ARK to vote"
+msgid "you need at least 1 BPL to vote"
 msgstr "Для голосования необходимо иметь хотя бы 1ARK"
 
-msgid "you need at least 25 ARK to register delegate"
-msgstr "вам нужно как минимум 25 ARK для регистрации делегата"
+msgid "you need at least 25 BPL to register delegate"
+msgstr "вам нужно как минимум 25 BPL для регистрации делегата"
 
