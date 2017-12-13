@@ -24,13 +24,13 @@ xdescribe('Select network', function () {
 
   context('when selecting the same network', () => {
     beforeEach(function () {
-      return this.app.client.selectNetwork('TESTNET (TESTARK)')
+      return this.app.client.selectNetwork('TESTNET (TESTBPL)')
     })
   })
 
   context('when selecting a different network', () => {
     beforeEach(function () {
-      return this.app.client.selectNetwork('MAINNET (ARK)')
+      return this.app.client.selectNetwork('MAINNET (BPL)')
     })
 
     describe('"My Accounts" ', () => {

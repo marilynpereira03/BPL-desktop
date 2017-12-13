@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('delegateTab', {
       templateUrl: 'src/components/account/templates/delegate-tab.html',
       bindings: {

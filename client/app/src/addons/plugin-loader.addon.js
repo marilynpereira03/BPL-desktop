@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.addons')
+  angular.module('bplclient.addons')
     .service('pluginLoader', ['accountService', PluginLoader])
 
   /**

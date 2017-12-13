@@ -5,11 +5,11 @@ describe('AccountBoxController', function () {
 
   let ctrl
 
-  const ARKTOSHI_UNIT = 100000000
+  const BPLTOSHI_UNIT = 100000000
   const accounts = [
-    { balance: 10 * ARKTOSHI_UNIT },
-    { balance: 15 * ARKTOSHI_UNIT },
-    { balance: 5 * ARKTOSHI_UNIT },
+    { balance: 10 * BPLTOSHI_UNIT },
+    { balance: 15 * BPLTOSHI_UNIT },
+    { balance: 5 * BPLTOSHI_UNIT },
     {}
   ]
 
@@ -30,8 +30,8 @@ describe('AccountBoxController', function () {
   }
 
   beforeEach(() => {
-    module('arkclient.components', $provide => {
-      $provide.value('ARKTOSHI_UNIT', Math.pow(10, 8))
+    module('bplclient.components', $provide => {
+      $provide.value('BPLTOSHI_UNIT', Math.pow(10, 8))
     })
 
     inject(_$componentController_ => {
@@ -40,7 +40,7 @@ describe('AccountBoxController', function () {
   })
 
   describe('myAccountsBalance()', () => {
-    it('sums the balance (in ARK, formatted) of all accounts', function () {
+    it('sums the balance (in BPL, formatted) of all accounts', function () {
       expect(ctrl.myAccountsBalance()).to.equal('30.00')
     })
   })
@@ -69,10 +69,10 @@ describe('AccountBoxController', function () {
       it('updates the balance', function () {
         expect(ctrl.myAccountsBalance()).to.equal('30.00')
         sinon.stub(bindings.accountCtrl, 'getAllAccounts').returns([
-          { balance: 1 * ARKTOSHI_UNIT },
-          { balance: 17 * ARKTOSHI_UNIT },
-          { balance: 1 * ARKTOSHI_UNIT },
-          { balance: 1 * ARKTOSHI_UNIT }
+          { balance: 1 * BPLTOSHI_UNIT },
+          { balance: 17 * BPLTOSHI_UNIT },
+          { balance: 1 * BPLTOSHI_UNIT },
+          { balance: 1 * BPLTOSHI_UNIT }
         ])
         ctrl.accountCtrl.refreshAccountBalances()
         expect(ctrl.myAccountsBalance()).to.equal('20.00')

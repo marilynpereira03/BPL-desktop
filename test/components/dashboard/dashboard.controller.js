@@ -10,7 +10,7 @@ describe('DashboardController', function () {
     mdToastMock
 
   beforeEach(() => {
-    module('arkclient.components', $provide => {
+    module('bplclient.components', $provide => {
       feedServiceMock = {
         fetchBlogEntries: sinon.stub()
       }

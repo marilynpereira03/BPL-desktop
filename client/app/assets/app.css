@@ -51,8 +51,12 @@ body {
 .md-toolbar-tools {
     min-height: 64px;
     -webkit-app-region: drag;
+    background-color: #0f0f15;
 }
-
+.md-content.md-default-theme, md-content{
+    color: #fff;
+    background-color: #1d1d1d;
+}
 .selectcoin {
     min-height: 125px;
 }

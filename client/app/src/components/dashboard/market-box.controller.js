@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('marketBox', {
       templateUrl: 'src/components/dashboard/market-box.html',
       bindings: {

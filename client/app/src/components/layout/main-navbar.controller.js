@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('mainNavbar', {
       templateUrl: 'src/components/layout/main-navbar.html',
       bindings: {

@@ -1,8 +1,8 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.accounts')
-    .service('accountService', ['$q', '$http', 'networkService', 'storageService', 'ledgerService', 'gettextCatalog', 'ARKTOSHI_UNIT', AccountService])
+  angular.module('bplclient.accounts')
+    .service('accountService', ['$q', '$http', 'networkService', 'storageService', 'ledgerService', 'gettextCatalog', 'BPLTOSHI_UNIT', AccountService])
 
   /**
    * Accounts DataService
@@ -12,20 +12,20 @@
    * @returns {{loadAll: Function}}
    * @constructor
    */
-  function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, ARKTOSHI_UNIT) {
+  function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, BPLTOSHI_UNIT) {
     var self = this
-    var ark = require('../node_modules/arkjs')
+    var bpl = require('../node_modules/arkjs')
 
     self.defaultFees = {
       'send': 10000000,
       'vote': 100000000,
       'secondsignature': 500000000,
-      'delegate': 2500000000,
+      'delegate': 1000000000,
       'multisignature': 500000000
     }
 
     self.TxTypes = {
-      0: 'Send Ark',
+      0: 'Send Bpl',
       1: 'Second Signature Creation',
       2: 'Delegate Registration',
       3: 'Vote',
@@ -35,7 +35,7 @@
     self.peer = networkService.getPeer().ip
 
     function showTimestamp (time) { // eslint-disable-line no-unused-vars
-      var d = new Date(Date.UTC(2017, 2, 21, 13, 0, 0, 0))
+      var d = new Date(Date.UTC(2017, 12, 11, 13, 0, 0, 0))
 
       var t = parseInt(d.getTime() / 1000)
 
@@ -156,8 +156,8 @@
 
     function createAccount (passphrase) {
       return new Promise((resolve, reject) => {
-        const publicKey = ark.crypto.getKeys(passphrase).publicKey
-        const address = ark.crypto.getAddress(publicKey, networkService.getNetwork().version)
+        const publicKey = bpl.crypto.getKeys(passphrase).publicKey
+        const address = bpl.crypto.getAddress(publicKey, networkService.getNetwork().version)
 
         fetchAccount(address).then(account => {
           if (account) {
@@ -173,7 +173,7 @@
 
     function savePassphrases (address, passphrase, secondpassphrase) {
       var deferred = $q.defer()
-      var tempaddress = ark.crypto.getAddress(ark.crypto.getKeys(passphrase).publicKey)
+      var tempaddress = bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey)
       if (passphrase) {
         var account = getAccount(tempaddress)
         if (account && account.address === address) {
@@ -239,14 +239,14 @@
       var label = gettextCatalog.getString(self.TxTypes[transaction.type])
 
       if (recipientAddress && transaction.recipientId === recipientAddress && transaction.type === 0) {
-        label = gettextCatalog.getString('Receive Ark')
+        label = gettextCatalog.getString('Receive BPL')
       }
 
       return label
     }
 
     function formatTransaction (transaction, recipientAddress) {
-      var d = new Date(Date.UTC(2017, 2, 21, 13, 0, 0, 0))
+      var d = new Date(Date.UTC(2017, 12, 11, 13, 0, 0, 0))
       var t = parseInt(d.getTime() / 1000)
 
       transaction.label = getTransactionLabel(transaction, recipientAddress)
@@ -254,14 +254,14 @@
       if (transaction.recipientId === recipientAddress) {
         transaction.total = transaction.amount
       // if (transaction.type == 0) {
-      //   transaction.label = gettextCatalog.getString("Receive Ark")
+      //   transaction.label = gettextCatalog.getString("Receive Bpl")
       // }
       }
       if (transaction.senderId === recipientAddress) {
         transaction.total = -transaction.amount - transaction.fee
       }
       // to avoid small transaction to be displayed as 1e-8
-      transaction.humanTotal = numberToFixed(transaction.total / ARKTOSHI_UNIT) + ''
+      transaction.humanTotal = numberToFixed(transaction.total / BPLTOSHI_UNIT) + ''
 
       return transaction
     }
@@ -408,8 +408,8 @@
       var crypto = require('crypto')
       var hash = crypto.createHash('sha256')
       hash = hash.update(Buffer.from(message, 'utf-8')).digest()
-      var ecpair = ark.ECPair.fromPublicKeyBuffer(Buffer.from(publicKey, 'hex'))
-      var ecsignature = ark.ECSignature.fromDER(Buffer.from(signature, 'hex'))
+      var ecpair = bpl.ECPair.fromPublicKeyBuffer(Buffer.from(publicKey, 'hex'))
+      var ecsignature = bpl.ECSignature.fromDER(Buffer.from(signature, 'hex'))
       var success = ecpair.verify(hash, ecsignature)
 
       message = gettextCatalog.getString('Error in signature processing')
@@ -426,7 +426,7 @@
       var crypto = require('crypto')
       var hash = crypto.createHash('sha256')
       hash = hash.update(Buffer.from(message, 'utf-8')).digest()
-      var ecpair = ark.crypto.getKeys(passphrase)
+      var ecpair = bpl.crypto.getKeys(passphrase)
       deferred.resolve({ signature: ecpair.sign(hash).toDER().toString('hex') })
       return deferred.promise
     }
@@ -449,20 +449,20 @@
       getFees().then(function (fees) {
         var account
         var transaction
-        if (type === 0) { // send ark
-          if (!ark.crypto.validateAddress(config.toAddress, networkService.getNetwork().version)) {
+        if (type === 0) { // send bpl
+          if (!bpl.crypto.validateAddress(config.toAddress, networkService.getNetwork().version)) {
             deferred.reject(gettextCatalog.getString('The destination address ') + config.toAddress + gettextCatalog.getString(' is erroneous'))
             return deferred.promise
           }
 
           account = getAccount(config.fromAddress)
           if (config.amount + fees.send > account.balance) {
-            deferred.reject(gettextCatalog.getString('Not enough ARK on your account ') + config.fromAddress)
+            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress)
             return deferred.promise
           }
 
           try {
-            transaction = ark.transaction.createTransaction(config.toAddress, config.amount, config.smartbridge, config.masterpassphrase, config.secondpassphrase)
+            transaction = bpl.transaction.createTransaction(config.toAddress, config.amount, config.smartbridge, config.masterpassphrase, config.secondpassphrase)
           } catch (e) {
             deferred.reject(e)
             return deferred.promise
@@ -477,7 +477,7 @@
               function (result) {
                 console.log(result)
                 transaction.signature = result.signature
-                transaction.id = ark.crypto.getId(transaction)
+                transaction.id = bpl.crypto.getId(transaction)
                 deferred.resolve(transaction)
               },
               function (error) {
@@ -485,7 +485,7 @@
               }
             )
             return deferred.promise
-          } else if (ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
           } else {
             deferred.resolve(transaction)
@@ -493,11 +493,11 @@
         } else if (type === 1) { // second passphrase creation
           account = getAccount(config.fromAddress)
           if (account.balance < fees.secondpassphrase) {
-            deferred.reject(gettextCatalog.getString('Not enough ARK on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 5 ARK to create a second passphrase'))
+            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 5 BPL to create a second passphrase'))
             return deferred.promise
           }
           try {
-            transaction = ark.signature.createSignature(config.masterpassphrase, config.secondpassphrase)
+            transaction = bpl.signature.createSignature(config.masterpassphrase, config.secondpassphrase)
           } catch (e) {
             deferred.reject(e)
             return deferred.promise
@@ -512,7 +512,7 @@
               function (result) {
                 console.log(result)
                 transaction.signature = result.signature
-                transaction.id = ark.crypto.getId(transaction)
+                transaction.id = bpl.crypto.getId(transaction)
                 deferred.resolve(transaction)
               },
               function (error) {
@@ -520,7 +520,7 @@
               }
             )
             return deferred.promise
-          } else if (ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
             return deferred.promise
           }
@@ -528,12 +528,12 @@
         } else if (type === 2) { // delegate creation
           account = getAccount(config.fromAddress)
           if (account.balance < fees.delegate) {
-            deferred.reject(gettextCatalog.getString('Not enough ARK on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 25 ARK to register delegate'))
+            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 10 BPL to register delegate'))
             return deferred.promise
           }
           console.log(config)
           try {
-            transaction = ark.delegate.createDelegate(config.masterpassphrase, config.username, config.secondpassphrase)
+            transaction = bpl.delegate.createDelegate(config.masterpassphrase, config.username, config.secondpassphrase)
           } catch (e) {
             deferred.reject(e)
             return deferred.promise
@@ -548,7 +548,7 @@
               function (result) {
                 console.log(result)
                 transaction.signature = result.signature
-                transaction.id = ark.crypto.getId(transaction)
+                transaction.id = bpl.crypto.getId(transaction)
                 deferred.resolve(transaction)
               },
               function (error) {
@@ -556,7 +556,7 @@
               }
             )
             return deferred.promise
-          } else if (ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
             return deferred.promise
           }
@@ -564,11 +564,11 @@
         } else if (type === 3) { // vote
           account = getAccount(config.fromAddress)
           if (account.balance < fees.vote) {
-            deferred.reject(gettextCatalog.getString('Not enough ARK on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 1 ARK to vote'))
+            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 1 BPL to vote'))
             return deferred.promise
           }
           try {
-            transaction = ark.vote.createVote(config.masterpassphrase, config.publicKeys.split(','), config.secondpassphrase)
+            transaction = bpl.vote.createVote(config.masterpassphrase, config.publicKeys.split(','), config.secondpassphrase)
           } catch (e) {
             deferred.reject(e)
             return deferred.promise
@@ -584,7 +584,7 @@
               function (result) {
                 console.log(result)
                 transaction.signature = result.signature
-                transaction.id = ark.crypto.getId(transaction)
+                transaction.id = bpl.crypto.getId(transaction)
                 deferred.resolve(transaction)
               },
               function (error) {
@@ -592,7 +592,7 @@
               }
             )
             return deferred.promise
-          } else if (ark.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
             return deferred.promise
           }
@@ -692,7 +692,7 @@
 
     function createVirtual (passphrase) {
       var deferred = $q.defer()
-      var address = ark.crypto.getAddress(ark.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version)
+      var address = bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version)
       var account = getAccount(address)
       if (account) {
         account.virtual = account.virtual || {}
@@ -742,10 +742,10 @@
                 if (value === null) {
                   virtual[folder].amount = null
                 } else {
-                  virtual[folder].amount = value * ARKTOSHI_UNIT
+                  virtual[folder].amount = value * BPLTOSHI_UNIT
                 }
               } else {
-                return virtual[folder].amount === null ? '' : virtual[folder].amount / ARKTOSHI_UNIT
+                return virtual[folder].amount === null ? '' : virtual[folder].amount / BPLTOSHI_UNIT
               }
             }
           }

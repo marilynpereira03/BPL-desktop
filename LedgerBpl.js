@@ -2,13 +2,13 @@
 
 var utils = require('./utils')
 
-var LedgerArk = function (comm) {
+var LedgerBpl = function (comm) {
   this.comm = comm
   this.comm.setScrambleKey('w0w')
 }
 
 /* eslint-disable node/no-deprecated-api */
-LedgerArk.prototype.getAddress_async = function (path) {
+LedgerBpl.prototype.getAddress_async = function (path) {
   var splitPath = utils.splitPath(path)
   var buffer = new Buffer(5 + 1 + splitPath.length * 4)
   buffer[0] = 0xe0
@@ -32,7 +32,7 @@ LedgerArk.prototype.getAddress_async = function (path) {
   })
 }
 
-LedgerArk.prototype.signTransaction_async = function (path, rawTxHex) {
+LedgerBpl.prototype.signTransaction_async = function (path, rawTxHex) {
   var splitPath = utils.splitPath(path)
   var rawTx = Buffer.from(rawTxHex, 'hex')
   var self = this
@@ -89,7 +89,7 @@ LedgerArk.prototype.signTransaction_async = function (path, rawTxHex) {
   })
 }
 
-LedgerArk.prototype.getAppConfiguration_async = function () {
+LedgerBpl.prototype.getAppConfiguration_async = function () {
   var buffer = new Buffer(5)
   buffer[0] = 0xe0
   buffer[1] = 0x06
@@ -105,7 +105,7 @@ LedgerArk.prototype.getAppConfiguration_async = function () {
   })
 }
 
-LedgerArk.prototype.signPersonalMessage_async = function (path, messageHex) {
+LedgerBpl.prototype.signPersonalMessage_async = function (path, messageHex) {
   var splitPath = utils.splitPath(path)
   var offset = 0
   var message = Buffer.from(messageHex, 'hex')
@@ -149,4 +149,4 @@ LedgerArk.prototype.signPersonalMessage_async = function (path, messageHex) {
 }
 /* eslint-enable node/no-deprecated-api */
 
-module.exports = LedgerArk
+module.exports = LedgerBpl

@@ -6,16 +6,16 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('accountBox', {
       templateUrl: 'src/components/dashboard/account-box.html',
       bindings: {
         accountCtrl: '='
       },
-      controller: ['$scope', 'networkService', 'accountService', 'ARKTOSHI_UNIT', AccountBoxController]
+      controller: ['$scope', 'networkService', 'accountService', 'BPLTOSHI_UNIT', AccountBoxController]
     })
 
-  function AccountBoxController ($scope, networkService, accountService, ARKTOSHI_UNIT) {
+  function AccountBoxController ($scope, networkService, accountService, BPLTOSHI_UNIT) {
     this.$onInit = () => {
       // Alias that is used on the template
       this.ac = this.accountCtrl
@@ -26,7 +26,7 @@
         return sum + parseInt(account.balance || 0)
       }, 0)
 
-      return (total / ARKTOSHI_UNIT).toFixed(2)
+      return (total / BPLTOSHI_UNIT).toFixed(2)
     }
 
     this.myAccountsCurrencyBalance = (bitcoinToggleIsActive) => {

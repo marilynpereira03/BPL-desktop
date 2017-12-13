@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('exchangeTab', {
       templateUrl: 'src/components/account/templates/exchange-tab.html',
       bindings: {

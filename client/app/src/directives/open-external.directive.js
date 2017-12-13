@@ -4,7 +4,7 @@
   /*
    * Opens a link in a new browser tab
    */
-  angular.module('arkclient.directives')
+  angular.module('bplclient.directives')
     .directive('openExternal', [function () {
       return {
         restrict: 'A',

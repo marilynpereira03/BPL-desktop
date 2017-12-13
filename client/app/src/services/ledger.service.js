@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.services')
+  angular.module('bplclient.services')
     .service('ledgerService', ['$q', '$http', '$timeout', 'storageService', 'networkService', LedgerService])
 
   /**
@@ -10,7 +10,7 @@
    */
   function LedgerService ($q, $http, $timeout, storageService, networkService) {
     var ipcRenderer = require('electron').ipcRenderer
-    var arkjs = require('../node_modules/arkjs')
+    var bpljs = require('../node_modules/arkjs')
     var bip39 = require('../node_modules/bip39')
     var async = require('async')
 
@@ -41,7 +41,7 @@
             path: localpath
           })
           if (result.address) {
-            result.address = arkjs.crypto.getAddress(result.publicKey)
+            result.address = bpljs.crypto.getAddress(result.publicKey)
             accountIndex = accountIndex + 1
             var account = storageService.get(result.address) || result
             account.ledger = localpath
@@ -89,7 +89,7 @@
     }
 
     function recoverBip44Accounts (backupLedgerPassphrase, slip44) {
-      var hdnode = arkjs.HDNode.fromSeedHex(bip39.mnemonicToSeedHex(backupLedgerPassphrase))
+      var hdnode = bpljs.HDNode.fromSeedHex(bip39.mnemonicToSeedHex(backupLedgerPassphrase))
 
       var accounts = []
       var accountIndex = 0
@@ -133,7 +133,7 @@
       })
       ipcRenderer.send('ledger', {
         action: 'signTransaction',
-        data: arkjs.crypto.getBytes(transaction, true, true).toString('hex'),
+        data: bpljs.crypto.getBytes(transaction, true, true).toString('hex'),
         path: path
       })
       return deferred.promise

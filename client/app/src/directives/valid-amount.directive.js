@@ -1,9 +1,9 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.directives')
-    .directive('validAmount', ['ARKTOSHI_UNIT',
-      function (ARKTOSHI_UNIT) {
+  angular.module('bplclient.directives')
+    .directive('validAmount', ['BPLTOSHI_UNIT',
+      function (BPLTOSHI_UNIT) {
         return {
           require: 'ngModel',
           link: function (scope, elem, attrs, ctrl) {
@@ -11,10 +11,10 @@
               if (typeof value === 'undefined' || value === 0) {
                 ctrl.$pristine = true
               }
-              var num = Number((value * ARKTOSHI_UNIT).toFixed(0)) // 1.1 = 110000000
-              var totalBalance = Number(scope.send.totalBalance * ARKTOSHI_UNIT)
-              var remainingBalance = ((totalBalance - num) / ARKTOSHI_UNIT)
-              scope.send.remainingBalance = isNaN(remainingBalance) ? totalBalance / ARKTOSHI_UNIT : remainingBalance
+              var num = Number((value * BPLTOSHI_UNIT).toFixed(0)) // 1.1 = 110000000
+              var totalBalance = Number(scope.send.totalBalance * BPLTOSHI_UNIT)
+              var remainingBalance = ((totalBalance - num) / BPLTOSHI_UNIT)
+              scope.send.remainingBalance = isNaN(remainingBalance) ? totalBalance / BPLTOSHI_UNIT : remainingBalance
 
               if (typeof num === 'number' && num > 0) {
                 if (num > Number.MAX_SAFE_INTEGER) {

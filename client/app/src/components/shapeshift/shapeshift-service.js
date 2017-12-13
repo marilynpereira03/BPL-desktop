@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.components')
+  angular.module('bplclient.components')
     .service('shapeshiftService', ['$q', '$http', '$timeout', ShapeshiftService])
 
   /**

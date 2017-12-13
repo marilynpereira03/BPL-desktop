@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.directives')
+  angular.module('bplclient.directives')
     .directive('copyToClipboard', function ($window) {
       var body = angular.element($window.document.body)
       var textarea = angular.element('<textarea/>')

@@ -9,13 +9,13 @@
    * customize other elements, such as buttons that would not be distinguishable
    * otherwise. Others could use it for improving the general aesthetics.
    */
-  angular.module('arkclient.directives')
+  angular.module('bplclient.directives')
     .directive('backgroundStyle', [function () {
       return {
         restrict: 'A',
         require: '?ngModel',
         link: function (scope, elem, attrs, ctrl) {
-          var defaultBackground = 'url(assets/images/images/Ark.jpg)'
+          var defaultBackground = 'url(assets/images/images/Bpl.jpg)'
           // This is the custom configuration of textures
           var textures = {
             'Ahoy.jpg': {

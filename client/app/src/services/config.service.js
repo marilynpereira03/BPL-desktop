@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.services')
+  angular.module('bplclient.services')
     .service('configService', [ConfigService])
 
   /**

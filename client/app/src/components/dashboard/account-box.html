@@ -53,7 +53,7 @@
           {{it.username||it.address}}  <span ng-if="it.delegate">({{it.delegate.rate}})</span>
         </span>
         <span class="md-secondary">
-          {{$ctrl.ac.network.symbol}} {{it.balance | convertToArkValue}}
+          {{$ctrl.ac.network.symbol}} {{it.balance | convertToBplValue}}
         </span>
       </md-list-item>
     </md-list>

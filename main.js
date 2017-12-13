@@ -10,7 +10,7 @@ const Menu = electron.Menu
 const openAboutWindow = require('about-window').default
 
 const ledger = require('ledgerco')
-const LedgerArk = require('./LedgerArk')
+const LedgerBpl = require('./LedgerBpl')
 const fork = require('child_process').fork
 
 const windowStateKeeper = require('electron-window-state')
@@ -28,7 +28,7 @@ var template = null
 
 function createWindow () {
   // Create the browser window.t
-  var iconpath = require('path').resolve(__dirname, '/client/ark.png')
+  var iconpath = require('path').resolve(__dirname, '/client/bpl.png')
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
   let mainWindowState = windowStateKeeper({
@@ -69,22 +69,22 @@ function createWindow () {
         event.returnValue = 'connection not initialised'
       } else {
         try {
-          let ark = new LedgerArk(ledgercomm)
+          let bpl = new LedgerBpl(ledgercomm)
           if (arg.action === 'signMessage') {
-            ark.signPersonalMessage_async(arg.path, Buffer.from(arg.data)
+            bpl.signPersonalMessage_async(arg.path, Buffer.from(arg.data)
               .toString('hex'))
               .then((result) => event.sender.send('messageSigned', result))
               .fail((error) => event.sender.send('messageSigned', {error: error}))
           } else if (arg.action === 'signTransaction') {
-            ark.signTransaction_async(arg.path, arg.data)
+            bpl.signTransaction_async(arg.path, arg.data)
               .then((result) => event.sender.send('transactionSigned', result))
               .fail((error) => event.sender.send('transactionSigned', {error: error}))
           } else if (arg.action === 'getAddress') {
-            ark.getAddress_async(arg.path)
+            bpl.getAddress_async(arg.path)
               .then((result) => { event.returnValue = result })
               .fail((error) => { event.returnValue = error })
           } else if (arg.action === 'getConfiguration') {
-            ark.getAppConfiguration_async()
+            bpl.getAppConfiguration_async()
               .then((result) => {
                 result.connected = true
                 event.returnValue = result
@@ -108,7 +108,7 @@ function createWindow () {
           ledgercomm = null
           var result = {
             connected: false,
-            message: 'Cannot connect to Ark application'
+            message: 'Cannot connect to BPL application'
           }
           event.returnValue = result
         }
@@ -122,13 +122,13 @@ function createWindow () {
       label: 'Application',
       submenu: [
         {
-          label: 'About ArkClient',
+          label: 'About BPL Wallet',
           click: () => openAboutWindow({
-            icon_path: `${__dirname}/client/ark.png`,
+            icon_path: `${__dirname}/client/bpl.png`,
             package_json_dir: __dirname,
-            copyright: 'Copyright (c) 2017 ARK',
-            homepage: 'https://ark.io/',
-            bug_report_url: 'https://github.com/ArkEcosystem/ark-desktop/issues'
+            copyright: 'Copyright (c) 2017 BPL and 2017 ArkEcosystem',
+            homepage: 'https://blockpool.io/',
+            bug_report_url: 'https://github.com/blockpool-io/BPL-desktop/issues'
           })
         },
         { type: 'separator' },

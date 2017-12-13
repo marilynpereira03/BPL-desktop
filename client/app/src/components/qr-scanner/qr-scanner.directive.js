@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.components').directive('qrScanner', ['$rootScope', '$timeout', '$mdDialog', 'toastService', qrScanner])
+  angular.module('bplclient.components').directive('qrScanner', ['$rootScope', '$timeout', '$mdDialog', 'toastService', qrScanner])
 
   function qrScanner ($rootScope, $timeout, $mdDialog, toastService) {
     function controller ($scope) {

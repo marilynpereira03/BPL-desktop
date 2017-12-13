@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('votesTab', {
       templateUrl: 'src/components/account/templates/votes-tab.html',
       bindings: {

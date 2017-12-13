@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.services')
+  angular.module('bplclient.services')
     .service('changerService', ['storageService', '$q', '$http', '$timeout', 'timeService', ChangerService])
 
   /**
@@ -15,7 +15,7 @@
 
     var history = storageService.get('changer-history') || {}
 
-    // var ark = 'ark_ARK'
+    // var bpl = 'bpl_BPL'
 
     var coins = [
       { symbol: 'bitcoin_BTC', name: 'BTC', image: '' },

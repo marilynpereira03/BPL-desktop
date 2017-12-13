@@ -38,17 +38,17 @@
       <md-card flex="50">
         <md-toolbar>
           <h2 class="md-toolbar-tools">
-            <span><translate>Deposit ARK</translate> - {{(1/ul.buycoin.rate).toFixed(5)}} {{ul.selectedCoin.split("_")[1]}}</span>
+            <span><translate>Deposit BPL</translate> - {{(1/ul.buycoin.rate).toFixed(5)}} {{ul.selectedCoin.split("_")[1]}}</span>
           </h2>
         </md-toolbar>
         <md-list ng-if="!ul.exchangeBuy">
           <md-list-item>
-            <translate>Minimum:</translate>&nbsp;{{(ul.buycoin.limits.min_amount*ul.buycoin.rate).toFixed(1)}} ARK &nbsp;
-            <translate>Maximum:</translate>&nbsp;{{(ul.buycoin.limits.max_amount*ul.buycoin.rate).toFixed(1)}} ARK
+            <translate>Minimum:</translate>&nbsp;{{(ul.buycoin.limits.min_amount*ul.buycoin.rate).toFixed(1)}} BPL &nbsp;
+            <translate>Maximum:</translate>&nbsp;{{(ul.buycoin.limits.max_amount*ul.buycoin.rate).toFixed(1)}} BPL
           </md-list-item>
           <md-list-item>
             <md-input-container>
-              <label>{{'Amount'|translate}} (ARK)</label>
+              <label>{{'Amount'|translate}} (BPL)</label>
               <input  ng-model="ul.buyAmount" min="{{(ul.buycoin.limits.min_amount*ul.buycoin.rate).toFixed(1)}}" max="{{(ul.buycoin.limits.max_amount*ul.buycoin.rate).toFixed(1)}}" type="number">
             </md-input-container>
 
@@ -64,7 +64,7 @@
             <b class="md-secondary">{{ul.exchangeBuy.payee}}</b>
           </md-list-item>
           <md-list-item>
-            <translate>Receive</translate> {{ul.exchangeBuy.receive_amount}} ARK <translate>to</translate>
+            <translate>Receive</translate> {{ul.exchangeBuy.receive_amount}} BPL <translate>to</translate>
           </md-list-item>
           <md-list-item>
             <b class="md-secondary">{{ul.exchangeBuy.receiver_id}}</b>
@@ -98,18 +98,18 @@
       <md-card flex="50">
         <md-toolbar>
           <h2 class="md-toolbar-tools">
-            <span><translate>Withdraw ARK</translate> - {{ul.sellcoin.rate.toFixed(5)}} {{ul.selectedCoin.split("_")[1]}} </span>
+            <span><translate>Withdraw BPL</translate> - {{ul.sellcoin.rate.toFixed(5)}} {{ul.selectedCoin.split("_")[1]}} </span>
           </h2>
         </md-toolbar>
           <md-card-title ng-if="!ul.selected.virtual"><translate>Please login with your account before using this feature</translate></md-card-title>
           <md-list ng-if="!ul.exchangeSell&&ul.selected.virtual">
             <md-list-item>
-              <translate>Minimum:</translate>&nbsp;{{(ul.sellcoin.limits.min_amount).toFixed(1)}} ARK &nbsp;
-              <translate>Maximum:</translate>&nbsp;{{(ul.sellcoin.limits.max_amount).toFixed(1)}} ARK
+              <translate>Minimum:</translate>&nbsp;{{(ul.sellcoin.limits.min_amount).toFixed(1)}} BPL &nbsp;
+              <translate>Maximum:</translate>&nbsp;{{(ul.sellcoin.limits.max_amount).toFixed(1)}} BPL
             </md-list-item>
             <md-list-item>
               <md-input-container>
-                <label>{{'Amount'|translate}} (ARK)</label>
+                <label>{{'Amount'|translate}} (BPL)</label>
                 <input ng-model="ul.sellAmount" min="{{(ul.sellcoin.limits.min_amount).toFixed(1)}}" max="{{(ul.sellcoin.limits.max_amount).toFixed(1)}}" type="number">
               </md-input-container>
             </md-list-item>
@@ -138,7 +138,7 @@
 
           <md-list ng-if="ul.exchangeSell&&ul.selected.virtual">
             <md-list-item>
-              <translate>Send</translate> {{ul.exchangeSell.send_amount}} ARK <translate>to</translate>
+              <translate>Send</translate> {{ul.exchangeSell.send_amount}} BPL <translate>to</translate>
             </md-list-item>
             <md-list-item>
               <b class="md-secondary">{{ul.exchangeSell.payee}}</b>
@@ -162,7 +162,7 @@
 
           <md-card-footer>
             <md-button ng-if="ul.selected.virtual&&!ul.exchangeSell" ng-click="ul.sell()" md-colors="{'background':'red'}"><translate>Next...</translate></md-button>
-            <md-button ng-if="ul.selected.virtual&&ul.exchangeSell&&!ul.exchangeSell.sentTransaction" md-colors="{background:'red'}" ng-click="ul.exchangeArkNow(ul.exchangeSellTransaction)"><translate>Send</translate> {{ul.exchangeSell.send_amount}}ARK <translate>now!</translate></md-button>
+            <md-button ng-if="ul.selected.virtual&&ul.exchangeSell&&!ul.exchangeSell.sentTransaction" md-colors="{background:'red'}" ng-click="ul.exchangeBplNow(ul.exchangeSellTransaction)"><translate>Send</translate> {{ul.exchangeSell.send_amount}}BPL <translate>now!</translate></md-button>
             <md-button ng-if="ul.selected.virtual&&ul.exchangeSell&&!ul.exchangeSell.sentTransaction" ng-click="ul.cancelExchange()"><translate>Cancel</translate></md-button>
             <md-button ng-if="!ul.selected.virtual" md-colors="{background:'green'}" ng-click="ul.createFolder(ul.selected)"><translate>Login</translate></md-button>
           </md-card-footer>

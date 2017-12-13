@@ -2,7 +2,7 @@
   'use strict'
 
   angular
-    .module('arkclient.accounts')
+    .module('bplclient.accounts')
     .controller('AccountController', [
       'accountService',
       'networkService',
@@ -24,7 +24,7 @@
       '$mdThemingProvider',
       '$mdTheming',
       '$window',
-      'ARKTOSHI_UNIT',
+      'BPLTOSHI_UNIT',
       '$rootScope',
       AccountController
     ])
@@ -67,7 +67,7 @@
     $mdThemingProvider,
     $mdTheming,
     $window,
-    ARKTOSHI_UNIT,
+    BPLTOSHI_UNIT,
     $rootScope
   ) {
     var self = this
@@ -136,7 +136,7 @@
 
     self.closeApp = function () {
       var confirm = $mdDialog.confirm()
-        .title(gettextCatalog.getString('Quit Ark Client?'))
+        .title(gettextCatalog.getString('Quit BPL Client?'))
         .theme(self.currentTheme)
         .ok(gettextCatalog.getString('Quit'))
         .cancel(gettextCatalog.getString('Cancel'))
@@ -404,11 +404,11 @@
     }
 
     self.getMarketInfo = function (symbol) {
-      changerService.getMarketInfo(symbol, 'ark_ARK').then(function (answer) {
+      changerService.getMarketInfo(symbol, 'bpl_BPL').then(function (answer) {
         self.buycoin = answer
       })
 
-      changerService.getMarketInfo('ark_ARK', symbol).then(function (answer) {
+      changerService.getMarketInfo('bpl_BPL', symbol).then(function (answer) {
         self.sellcoin = answer
       })
     }
@@ -418,12 +418,12 @@
     self.buy = function () {
       if (self.exchangeEmail) storageService.set('email', self.exchangeEmail)
       if (self.selectedCoin) storageService.set('selectedCoin', self.selectedCoin)
-      changerService.getMarketInfo(self.selectedCoin, 'ark_ARK', self.buyAmount / self.buycoin.rate).then(function (rate) {
+      changerService.getMarketInfo(self.selectedCoin, 'bpl_BPL', self.buyAmount / self.buycoin.rate).then(function (rate) {
         var amount = self.buyAmount / rate.rate
         if (self.selectedCoin.split('_')[1] === 'USD') {
           amount = parseFloat(amount.toFixed(2))
         }
-        changerService.makeExchange(self.exchangeEmail, amount, self.selectedCoin, 'ark_ARK', self.selected.address).then(function (resp) {
+        changerService.makeExchange(self.exchangeEmail, amount, self.selectedCoin, 'bpl_BPL', self.selected.address).then(function (resp) {
           timeService.getTimestamp().then(
             function (timestamp) {
               self.exchangeBuy = resp
@@ -431,7 +431,7 @@
               self.exchangeBuy.expirationProgress = 0
               self.exchangeBuy.expirationDate = new Date(self.exchangeBuy.expiration * 1000)
               self.exchangeBuy.sendCurrency = self.selectedCoin.split('_')[1]
-              self.exchangeBuy.receiveCurrency = 'ARK'
+              self.exchangeBuy.receiveCurrency = 'BPL'
               var progressbar = $interval(function () {
                 if (!self.exchangeBuy) {
                   $interval.cancel(progressbar)
@@ -478,7 +478,7 @@
       self.exchangeSell.expirationProgress = 0
       self.exchangeSell.expirationDate = new Date(self.exchangeSell.expiration * 1000)
       self.exchangeSell.receiveCurrency = self.selectedCoin.split('_')[1]
-      self.exchangeSell.sendCurrency = 'ARK'
+      self.exchangeSell.sendCurrency = 'BPL'
       var progressbar = $interval(function () {
         if (!self.exchangeSell) {
           $interval.cancel(progressbar)
@@ -506,11 +506,11 @@
 
     self.sell = function () {
       if (self.exchangeEmail) storageService.set('email', self.exchangeEmail)
-      changerService.makeExchange(self.exchangeEmail, self.sellAmount, 'ark_ARK', self.selectedCoin, self.recipientAddress).then(function (resp) {
+      changerService.makeExchange(self.exchangeEmail, self.sellAmount, 'bpl_BPL', self.selectedCoin, self.recipientAddress).then(function (resp) {
         accountService.createTransaction(0, {
           fromAddress: self.selected.address,
           toAddress: resp.payee,
-          amount: parseInt(resp.send_amount * ARKTOSHI_UNIT),
+          amount: parseInt(resp.send_amount * BPLTOSHI_UNIT),
           masterpassphrase: self.passphrase,
           secondpassphrase: self.secondpassphrase
         }).then(function (transaction) {
@@ -542,7 +542,7 @@
       })
     }
 
-    self.exchangeArkNow = function (transaction) {
+    self.exchangeBplNow = function (transaction) {
       networkService.postTransaction(transaction).then(
         function (transaction) {
           self.exchangeSell.sentTransaction = transaction
@@ -658,7 +658,7 @@
     }
 
     self.saveFolder = function (account, folder) {
-      accountService.setToFolder(account.address, folder, account.virtual.uservalue(folder)() * ARKTOSHI_UNIT)
+      accountService.setToFolder(account.address, folder, account.virtual.uservalue(folder)() * BPLTOSHI_UNIT)
     }
 
     self.deleteFolder = function (account, foldername) {
@@ -1286,8 +1286,8 @@
           darkVibrantRatio[color] = darkVibrantDiff
         })
 
-        var isArkJpg = path.basename(url) === 'Ark.jpg'
-        var primaryColor = isArkJpg ? 'red' : sortObj(darkVibrantRatio)[0]
+        var isArkJpg = path.basename(url) === 'Bpl.jpg'
+        var primaryColor = isBplJpg ? 'red' : sortObj(darkVibrantRatio)[0]
         var accentColor = sortObj(vibrantRatio)[0]
 
         primaryColor = primaryColor === 'grey' ? 'blue-grey' : primaryColor
@@ -1413,7 +1413,7 @@
         delete backgrounds['user'][name]
 
         if (image === initialBackground) {
-          selectBackground(backgrounds['images']['Ark'])
+          selectBackground(backgrounds['images']['Bpl'])
         } else {
           selectBackground(initialBackground)
         }
@@ -1498,7 +1498,7 @@
     }
 
     function showExchangeRate () {
-      return self.network.cmcTicker || self.network.token === 'ARK'
+      return self.network.cmcTicker || self.network.token === 'BPL'
     }
 
     function manageNetworks () {
@@ -1916,8 +1916,8 @@
         transaction: transaction,
         label: accountService.getTransactionLabel(transaction),
         // to avoid small transaction to be displayed as 1e-8
-        humanAmount: accountService.numberToFixed(transaction.amount / ARKTOSHI_UNIT).toString(),
-        totalAmount: ((parseFloat(transaction.amount) + transaction.fee) / ARKTOSHI_UNIT).toString()
+        humanAmount: accountService.numberToFixed(transaction.amount / BPLTOSHI_UNIT).toString(),
+        totalAmount: ((parseFloat(transaction.amount) + transaction.fee) / BPLTOSHI_UNIT).toString()
       }
 
       $mdDialog.show({

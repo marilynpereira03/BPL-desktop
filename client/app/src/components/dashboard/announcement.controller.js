@@ -9,7 +9,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .controller('AnnouncementController', [
       '$scope', '$mdToast', 'locals', 'storageService', AnnouncementController
     ])

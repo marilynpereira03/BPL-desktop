@@ -2,7 +2,7 @@
   'use strict'
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('emptyState', {
       templateUrl: 'src/components/emptystate/empty-state.html',
       bindings: {

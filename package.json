@@ -1,8 +1,8 @@
 {
-  "name": "ArkClient",
+  "name": "BPLClient",
   "version": "1.4.3",
-  "productName": "ArkClient",
-  "description": "Ark Desktop Wallet",
+  "productName": "BPLClient",
+  "description": "BPLClient",
   "main": "main.js",
   "scripts": {
     "postinstall": "cd client && npm install && npm run bundle && cd .. && electron-builder install-app-deps && npm run rebuild",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArkEcosystem/ark-desktop.git"
+    "url": "git+https://github.com/blockpool-io/BPL-desktop.git"
   },
   "keywords": [
-    "Ark",
+    "Bpl",
     "Client",
     "Electron"
   ],
@@ -55,9 +55,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ArkEcosystem/ark-desktop/issues"
+    "url": "https://github.com/blockpool-io/BPL-desktop/issues"
   },
-  "homepage": "https://github.com/ArkEcosystem/ark-desktop#readme",
+  "homepage": "https://github.com/blockpool-io/BPL-desktop#readme",
   "dependencies": {
     "about-window": "~1.8.0",
     "async": "^2.5.0",
@@ -97,7 +97,7 @@
     "standard": "^10.0.3"
   },
   "build": {
-    "appId": "com.arkwallet.liteclient",
+    "appId": "com.bplwallet.liteclient",
     "mac": {
       "category": "finance"
     },
@@ -106,14 +106,14 @@
       "icon": "build/icon.ico"
     },
     "linux": {
-      "description": "A Lite Client used to securely connect to the Ark network and manage your Ark assets.",
+      "description": "A Lite Client used to securely connect to the BPL network and manage your BPL assets.",
       "target": [
         "deb",
         "tar.xz"
       ]
     },
     "deb": {
-      "synopsis": "Ark Desktop Wallet"
+      "synopsis": "Bpl Desktop Wallet"
     },
     "dmg": {
       "icon": "build/icon.icns"

@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.services')
+  angular.module('bplclient.services')
     .service('feedService', [FeedService])
 
   function FeedService () {
@@ -20,10 +20,10 @@
       },
 
       /**
-       * Fetches and parses the RSS of ARK.io
+       * Fetches and parses the RSS of blockpool.io
        */
       fetchBlogEntries () {
-        const rssUrl = 'https://blog.ark.io/feed'
+        const rssUrl = 'https://medium.com/blockpool'
         return this.fetchAndParse(rssUrl).then(parsed => parsed.feed.entries)
       }
     }

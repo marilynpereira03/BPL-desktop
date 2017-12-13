@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('sendTransaction', {
       templateUrl: 'src/accounts/view/sendArkDialog.html',
       bindings: {

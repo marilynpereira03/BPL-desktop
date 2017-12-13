@@ -2,7 +2,7 @@
   'use strict'
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('dashboard', {
       templateUrl: 'src/components/dashboard/templates/dashboard.html',
       bindings: {

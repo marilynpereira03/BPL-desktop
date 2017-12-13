@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('networkBox', {
       templateUrl: 'src/components/dashboard/network-box.html',
       bindings: {

@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('signingTab', {
       templateUrl: 'src/components/account/templates/signing-tab.html',
       bindings: {

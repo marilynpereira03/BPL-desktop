@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.services')
+  angular.module('bplclient.services')
     .service('networkService', ['$q', '$http', '$timeout', 'storageService', 'timeService', 'toastService', NetworkService])
 
   /**
@@ -14,8 +14,8 @@
     if (!network) {
       network = switchNetwork()
     }
-    var ark = require('../node_modules/arkjs')
-    ark.crypto.setNetworkVersion(network.version || 23)
+    var bpl = require('../node_modules/arkjs')
+    bpl.crypto.setNetworkVersion(network.version || 25)
 
     var clientVersion = require('../../package.json').version
 
@@ -91,27 +91,27 @@
       if (!n) {
         n = {
           mainnet: { // so far same as testnet
-            nethash: '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988',
-            peerseed: 'http://5.39.9.240:4001',
+            nethash: '7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3',
+            peerseed:'http://13.56.163.57:9030',
             forcepeer: false,
-            token: 'ARK',
-            symbol: 'Ѧ',
-            version: 0x17,
+            token: 'BPL',
+            symbol: 'β',
+            version: 0x19,
             slip44: 111,
-            explorer: 'https://explorer.ark.io',
+            explorer: 'http://54.183.132.15:9031/',
             exchanges: {
-              changer: 'ark_ARK'
+              changer: 'bpl_BPL'
             },
-            background: 'url(assets/images/images/Ark.jpg)',
+            background: 'url(assets/images/images/Bpl.jpg)',
             theme: 'default',
             themeDark: false
           },
-          devnet: {
-            nethash: '578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23',
-            peerseed: 'http://167.114.29.55:4002',
-            token: 'DARK',
-            symbol: 'DѦ',
-            version: 30,
+          testnet: {
+            nethash: 'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db',
+            peerseed: 'http://13.59.229.104:9028',
+            token: 'BPL',
+            symbol: 'Tβ',
+            version: 0x19,
             slip44: 1, // all coin testnet
             explorer: 'http://dexplorer.ark.io',
             background: '#222299',
@@ -149,12 +149,12 @@
         peer.market.isOffline = true
       }
 
-      if (!network.cmcTicker && network.token !== 'ARK') {
+      if (!network.cmcTicker && network.token !== 'blockpool') {
         failedTicker()
         return
       }
 
-      $http.get('https://api.coinmarketcap.com/v1/ticker/' + (network.cmcTicker || 'ARK'), { timeout: 2000 })
+      $http.get('https://api.coinmarketcap.com/v1/ticker/' + (network.cmcTicker || 'blockpool'), { timeout: 2000 })
       .then(function (res) {
         if (res.data[0] && res.data[0].price_btc) {
           res.data[0].price_btc = convertToSatoshi(res.data[0].price_btc) // store BTC price in satoshi
@@ -206,7 +206,7 @@
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'os': 'ark-desktop',
+          'os': 'bpl-desktop',
           'version': clientVersion,
           'port': 1,
           'nethash': network.nethash
@@ -257,7 +257,7 @@
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'os': 'ark-desktop',
+          'os': 'bpl-desktop',
           'version': clientVersion,
           'port': 1,
           'nethash': network.nethash
@@ -330,7 +330,7 @@
 
     function getLatestClientVersion () {
       var deferred = $q.defer()
-      var url = 'https://api.github.com/repos/ArkEcosystem/ark-desktop/releases/latest'
+      var url = 'https://api.github.com/repos/blockpool-io/BPL-desktop/releases/latest'
       $http.get(url, { timeout: 5000 })
         .then(function (res) {
           deferred.resolve(res.data.tag_name)

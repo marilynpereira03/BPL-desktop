@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  angular.module('arkclient.components').controller('qrScannerController', ['$scope', '$interval', '$timeout', '$window', ScannerController])
+  angular.module('bplclient.components').controller('qrScannerController', ['$scope', '$interval', '$timeout', '$window', ScannerController])
 
   function ScannerController ($scope, $interval, $timeout, $window) {
     var jsqr = require('jsqr')

@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('offchainTab', {
       templateUrl: 'src/components/account/templates/offchain-tab.html',
       bindings: {

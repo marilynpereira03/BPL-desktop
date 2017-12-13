@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('transactionTab', {
       templateUrl: 'src/components/account/templates/transaction-tab.html',
       bindings: {

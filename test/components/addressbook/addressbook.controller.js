@@ -14,7 +14,7 @@ describe('AddressbookController', function () {
     toastServiceMock
 
   beforeEach(() => {
-    module('arkclient.components', $provide => {
+    module('bplclient.components', $provide => {
       // define mocked services and stubbed calls
       mdDialogMock = {}
       mdToastMock = {}
@@ -34,7 +34,7 @@ describe('AddressbookController', function () {
       $provide.value('gettextCatalog', getTextCatalogMock)
       $provide.value('accountService', accountServiceMock)
       $provide.value('toastService', toastServiceMock)
-      $provide.value('ARKTOSHI_UNIT', Math.pow(10,8))
+      $provide.value('BPLTOSHI_UNIT', Math.pow(10,8))
     })
 
     inject((_$compile_, _$rootScope_, _$controller_) => {

@@ -3,7 +3,7 @@
 
   var fs = require('fs')
 
-  angular.module('arkclient.services')
+  angular.module('bplclient.services')
     .service('toastService', ['configService', '$mdToast', 'gettextCatalog', ToastService])
 
   /**
@@ -80,7 +80,7 @@
       if (!self.logFile) {
         return
       }
-      self.fileStream = self.fileStream || fs.createWriteStream('logs/ark.log', {flags: 'a+'})
+      self.fileStream = self.fileStream || fs.createWriteStream('logs/bpl.log', {flags: 'a+'})
       if (!self.fileStream) {
         return
       }

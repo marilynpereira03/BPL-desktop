@@ -2,7 +2,7 @@
   'use strict'
 
   angular
-    .module('arkclient.accounts')
+    .module('bplclient.accounts')
     .controller('AccountTransactionsController', [
       '$scope',
       '$timeout',

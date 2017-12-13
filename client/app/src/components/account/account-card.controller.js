@@ -7,17 +7,17 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('accountCard', {
       templateUrl: 'src/components/account/templates/account-card.html',
       bindings: {
         accountCtrl: '=',
         addressBookCtrl: '='
       },
-      controller: ['$scope', '$mdDialog', '$mdBottomSheet', 'gettextCatalog', 'accountService', 'storageService', 'ARKTOSHI_UNIT', 'toastService', AccountCardController]
+      controller: ['$scope', '$mdDialog', '$mdBottomSheet', 'gettextCatalog', 'accountService', 'storageService', 'BPLTOSHI_UNIT', 'toastService', AccountCardController]
     })
 
-  function AccountCardController ($scope, $mdDialog, $mdBottomSheet, gettextCatalog, accountService, storageService, ARKTOSHI_UNIT, toastService) {
+  function AccountCardController ($scope, $mdDialog, $mdBottomSheet, gettextCatalog, accountService, storageService, BPLTOSHI_UNIT, toastService) {
     this.$onInit = () => {
       this.ul = this.accountCtrl
       this.ab = this.addressBookCtrl
@@ -141,7 +141,7 @@
         publicKey: selectedAccount.publicKey,
         fromAddress: formData.fromAddress,
         toAddress: formData.toAddress,
-        amount: parseInt((formData.amount * ARKTOSHI_UNIT).toFixed(0)),
+        amount: parseInt((formData.amount * BPLTOSHI_UNIT).toFixed(0)),
         smartbridge: formData.smartbridge,
         masterpassphrase: formData.passphrase,
         secondpassphrase: formData.secondpassphrase
@@ -206,7 +206,7 @@
       function totalBalance (minusFee) {
         var fee = 10000000
         var balance = selectedAccount.balance
-        return accountService.numberToFixed((minusFee ? balance - fee : balance) / ARKTOSHI_UNIT)
+        return accountService.numberToFixed((minusFee ? balance - fee : balance) / BPLTOSHI_UNIT)
       }
 
       function fillSendableBalance () {
@@ -215,7 +215,7 @@
       }
 
       const submit = () => {
-        if (!$scope.sendArkForm.$valid) {
+        if (!$scope.sendBplForm.$valid) {
           return
         }
 

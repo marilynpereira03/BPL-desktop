@@ -28,10 +28,10 @@ describe('AccountCardController', function () {
   }
 
   beforeEach(() => {
-    module('arkclient.components', $provide => {
+    module('bplclient.components', $provide => {
       $provide.value('accountService', accountServiceMock)
       $provide.value('$mdDialog', mdDialogMock)
-      $provide.value('ARKTOSHI_UNIT', Math.pow(10, 8))
+      $provide.value('BPLTOSHI_UNIT', Math.pow(10, 8))
     })
 
     inject(_$componentController_ => {

@@ -1,7 +1,7 @@
 'use strict'
 
 describe('networkService', function () {
-  beforeEach(module('arkclient.services'))
+  beforeEach(module('bplclient.services'))
 
   describe('getConnection', function () {
     it('returns a promise', function () {

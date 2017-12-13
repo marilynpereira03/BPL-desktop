@@ -7,15 +7,15 @@ var modules = [
   'gettext',
   'monospaced.qrcode',
   'infinite-scroll',
-  'arkclient.filters',
-  'arkclient.services',
-  'arkclient.components',
-  'arkclient.directives',
-  'arkclient.accounts',
-  'arkclient.constants'
+  'bplclient.filters',
+  'bplclient.services',
+  'bplclient.components',
+  'bplclient.directives',
+  'bplclient.accounts',
+  'bplclient.constants'
 ]
 
-var app = angular.module('arkclient', modules)
+var app = angular.module('bplclient', modules)
 
 app.config(function ($mdIconProvider) {
   $mdIconProvider

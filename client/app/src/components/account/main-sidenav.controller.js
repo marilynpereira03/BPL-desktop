@@ -7,7 +7,7 @@
    */
 
   angular
-    .module('arkclient.components')
+    .module('bplclient.components')
     .component('mainSidenav', {
       templateUrl: 'src/components/account/templates/main-sidenav.html',
       bindings: {
