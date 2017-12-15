@@ -86,7 +86,7 @@
           </tr>
         </thead>
         <tbody md-body>
-          <tr md-row md-select="it" md-select-id="id" md-auto-select ng-repeat="it in $ctrl.ul.getAllDelegates($ctrl.ul.selected) | orderBy: query.order">
+          <tr md-row md-select="it" md-select-id="id" md-auto-select ng-repeat="it in $ctrl.ul.getAllDelegates($ctrl.ul.selected) | orderBy: query.order" id="voters-list">
             <td md-cell>{{it.rate}}</td>
             <td md-cell>{{it.username}}</td>
             <td md-cell><a ng-click="$ctrl.ul.gotoAddress(it.address)" md-colors="::{color: '{{ $ctrl.ul.network.themeDark ? 'background-200' : 'background-800' }}'}">{{it.address}}</a></td>
@@ -101,6 +101,10 @@
         </tbody>
       </table>
     </md-table-container>
+
+    <md-content id="vote-instruction" translate>
+      Once Voted , please wait for atleast one confirmation on the transaction for the delegate to show up in the above list. Same thing applies to when the delegate has been unvoted. If the changes dont reflect, please use the above refresh button.
+    </md-content>
 
     <md-content id="vote-help" translate>
       Voting is an optional, but important mechanism that keeps the Bpl network secure. The 201 delegates with the most votes from the network are responsible for verifying and forging transactions into new blocks. This page can be used to cast your vote for

@@ -182,7 +182,10 @@ md-button.menuBtn>md-icon {
     padding: 0 15px;
 }
 
-
+.delegate-name{
+  font-weight: bold;
+  font-size: 20px;
+}
 /* Utils */
 
 .content-wrapper {
@@ -276,7 +279,15 @@ span.name {
     padding: 20px;
     border-top: 1px solid #ccc;
 }
-
+#vote-instruction {
+    color: #555;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    font-style: italic;
+}
+#voters-list:hover {
+  background-color: yellow !important;
+}
 .tab-text-only-content {
     padding: 20px;
 }
