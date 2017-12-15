@@ -114,7 +114,7 @@
             version: 0x19,
             slip44: 1, // all coin testnet
             explorer: 'http://52.66.184.223:9029',
-            background: 'url(assets/images/images/BPL_background.jpg)',
+            background: 'url(assets/images/images/BPL_background3.jpg) no-repeat ',
             theme: 'default',
             themeDark: false
           }

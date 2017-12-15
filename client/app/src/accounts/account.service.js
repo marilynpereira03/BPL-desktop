@@ -631,7 +631,7 @@
         }
       })
 
-      if (delegates.length > 101) {
+      if (delegates.length > 201) {
         return null
       }
       var difflist = []
@@ -644,7 +644,7 @@
         } else {
           notRemovedDelegates.push(delegate)
         }
-        if (difflist.length === 33) {
+        if (difflist.length === 101) {
           assets.push(difflist)
           difflist = []
         }
@@ -655,7 +655,7 @@
           votedDelegate.vote = '-'
           difflist.push(votedDelegate)
         }
-        if (difflist.length === 33) {
+        if (difflist.length === 101) {
           assets.push(difflist)
           difflist = []
         }
@@ -667,28 +667,28 @@
       return assets
     }
 
-    function getSponsors () {
-      var deferred = $q.defer()
-      var result = []
-      $http.get('https://gist.githubusercontent.com/fix/a7b1d797be38b0591e725a24e6735996/raw/sponsors.json').then(function (resp) {
-        var count = 0
-        for (var i in resp.data) {
-          networkService.getFromPeer('/api/delegates/get/?publicKey=' + resp.data[i].publicKey).then(function (resp2) {
-            if (resp2.data && resp2.data.success && resp2.data.delegate) {
-              result.push(resp2.data.delegate)
-            }
-            count++
-            if (count === resp.data.length - 1) {
-              deferred.resolve(result)
-            }
-          }, () => count++)
-        }
-      }, function (err) {
-        console.log(err)
-        deferred.reject(gettextCatalog.getString('Cannot get sponsors'))
-      })
-      return deferred.promise
-    }
+    // function getSponsors () {
+    //   var deferred = $q.defer()
+    //   var result = []
+    //   $http.get('https://gist.githubusercontent.com/fix/a7b1d797be38b0591e725a24e6735996/raw/sponsors.json').then(function (resp) {
+    //     var count = 0
+    //     for (var i in resp.data) {
+    //       networkService.getFromPeer('/api/delegates/get/?publicKey=' + resp.data[i].publicKey).then(function (resp2) {
+    //         if (resp2.data && resp2.data.success && resp2.data.delegate) {
+    //           result.push(resp2.data.delegate)
+    //         }
+    //         count++
+    //         if (count === resp.data.length - 1) {
+    //           deferred.resolve(result)
+    //         }
+    //       }, () => count++)
+    //     }
+    //   }, function (err) {
+    //     console.log(err)
+    //     deferred.reject(gettextCatalog.getString('Cannot get sponsors'))
+    //   })
+    //   return deferred.promise
+    // }
 
     function createVirtual (passphrase) {
       var deferred = $q.defer()
@@ -893,7 +893,7 @@
 
       getDelegateByUsername: getDelegateByUsername,
 
-      getSponsors: getSponsors,
+      // getSponsors: getSponsors,
 
       getTransactionLabel: getTransactionLabel,
 

@@ -286,7 +286,8 @@ span.name {
     font-style: italic;
 }
 #voters-list:hover {
-  background-color: yellow !important;
+  background-color: #f4e927 !important;
+  opacity:0.6;
 }
 .tab-text-only-content {
     padding: 20px;
