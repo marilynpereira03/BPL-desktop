@@ -330,7 +330,7 @@
 
     function getLatestClientVersion () {
       var deferred = $q.defer()
-      var url = 'https://api.github.com/repos/blockpool-io/BPL-desktop'
+      var url = 'https://api.github.com/repos/blockpool-io/BPL-desktop/releases/latest'
       $http.get(url, { timeout: 5000 })
         .then(function (res) {
           deferred.resolve(res.data.tag_name)
