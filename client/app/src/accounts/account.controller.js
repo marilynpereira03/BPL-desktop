@@ -1010,7 +1010,7 @@
 
       function add () {
         function indexOfDelegates (array, item) {
-          if (array.lenght < 1){
+          if (array.length < 1){
             for (var i in array) {
               if (array[i].username === item.username) {
                 console.log(array[i])
@@ -1026,6 +1026,8 @@
         $mdDialog.hide()
         accountService.getDelegateByUsername(data.delegatename).then(
           function (delegate) {
+            console.log("******************************************");
+            console.log(indexOfDelegates(selectedAccount.selectedVotes, delegate));
             if (self.selected.selectedVotes.length < 201 && indexOfDelegates(selectedAccount.selectedVotes, delegate) < 0) {
               selectedAccount.selectedVotes.push(delegate)
             } else {
