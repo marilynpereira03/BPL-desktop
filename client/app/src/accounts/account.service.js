@@ -239,7 +239,7 @@
       var label = gettextCatalog.getString(self.TxTypes[transaction.type])
 
       if (recipientAddress && transaction.recipientId === recipientAddress && transaction.type === 0) {
-        label = gettextCatalog.getString('Receive BPL')
+        label = gettextCatalog.getString('Receive token')
       }
 
       return label
@@ -457,7 +457,7 @@
 
           account = getAccount(config.fromAddress)
           if (config.amount + fees.send > account.balance) {
-            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress)
+            deferred.reject(gettextCatalog.getString('Not enough token on your account ') + config.fromAddress)
             return deferred.promise
           }
 
@@ -493,7 +493,7 @@
         } else if (type === 1) { // second passphrase creation
           account = getAccount(config.fromAddress)
           if (account.balance < fees.secondpassphrase) {
-            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 5 BPL to create a second passphrase'))
+            deferred.reject(gettextCatalog.getString('Not enough token on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 5 token to create a second passphrase'))
             return deferred.promise
           }
           try {
@@ -528,7 +528,7 @@
         } else if (type === 2) { // delegate creation
           account = getAccount(config.fromAddress)
           if (account.balance < fees.delegate) {
-            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 10 BPL to register delegate'))
+            deferred.reject(gettextCatalog.getString('Not enough token on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 10 token to register delegate'))
             return deferred.promise
           }
           console.log(config)
@@ -564,7 +564,7 @@
         } else if (type === 3) { // vote
           account = getAccount(config.fromAddress)
           if (account.balance < fees.vote) {
-            deferred.reject(gettextCatalog.getString('Not enough BPL on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 1 BPL to vote'))
+            deferred.reject(gettextCatalog.getString('Not enough token on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 1 token to vote'))
             return deferred.promise
           }
           try {

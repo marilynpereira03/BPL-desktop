@@ -28,7 +28,7 @@ var template = null
 
 function createWindow () {
   // Create the browser window.t
-  var iconpath = require('path').resolve(__dirname, '/client/bpl.png')
+  var iconpath = require('path').resolve(__dirname, '/client/woooba-logo-large.png')
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
   let mainWindowState = windowStateKeeper({
@@ -122,11 +122,11 @@ function createWindow () {
       label: 'Application',
       submenu: [
         {
-          label: 'About BPL Wallet',
+          label: 'About WBX Wallet',
           click: () => openAboutWindow({
-            icon_path: `${__dirname}/client/bpl.png`,
+            icon_path: `${__dirname}/client/woooba-logo-large.png`,
             package_json_dir: __dirname,
-            copyright: 'Copyright (c) 2017 BPL and 2017 ArkEcosystem',
+            copyright: 'Copyright (c) 2018 WBX ,2017 BPL and 2017 ArkEcosystem',
             homepage: 'https://blockpool.io/',
             bug_report_url: 'https://github.com/blockpool-io/BPL-desktop/issues'
           })

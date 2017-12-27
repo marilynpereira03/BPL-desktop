@@ -15,7 +15,7 @@
       network = switchNetwork()
     }
     var bpl = require('../node_modules/bpljs')
-    bpl.crypto.setNetworkVersion(network.version || 25)
+    bpl.crypto.setNetworkVersion(network.version || 73)
 
     var clientVersion = require('../../package.json').version
 
@@ -99,21 +99,21 @@
             version: 0x19,
             slip44: 111,
             explorer: 'http://54.183.132.15:9031/',
-            exchanges: {
-              changer: 'bpl_BPL'
-            },
+            // exchanges: {
+            //   changer: 'bpl_BPL'
+            // },
             background: 'url(assets/images/images/BPL_background3.jpg) no-repeat ',
             theme: 'default',
             themeDark: false
           },
           testnet: {
-            nethash: 'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db',
-            peerseed: 'http://13.59.229.104:9028',
-            token: 'BPL',
-            symbol: 'Tβ',
-            version: 0x19,
+            nethash: 'b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d',
+            peerseed: 'http://165.227.239.66:9032',
+            token: 'WBX',
+            symbol: 'TW',
+            version: 73,
             slip44: 1, // all coin testnet
-            explorer: 'http://52.66.184.223:9029',
+            explorer: 'http://165.227.239.66:9032',
             background: 'url(assets/images/images/BPL_background3.jpg) no-repeat ',
             theme: 'default',
             themeDark: false
@@ -149,7 +149,7 @@
         peer.market.isOffline = true
       }
 
-      if (!network.cmcTicker && network.token !== 'BPL') {
+      if (!network.cmcTicker && network.token !== 'WBX') {
         failedTicker()
         return
       }
@@ -206,7 +206,7 @@
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'os': 'bpl-desktop',
+          'os': 'wbx-desktop',
           'version': clientVersion,
           'port': 1,
           'nethash': network.nethash
@@ -257,7 +257,7 @@
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'os': 'bpl-desktop',
+          'os': 'wbx-desktop',
           'version': clientVersion,
           'port': 1,
           'nethash': network.nethash

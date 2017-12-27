@@ -80,7 +80,7 @@
       if (!self.logFile) {
         return
       }
-      self.fileStream = self.fileStream || fs.createWriteStream('logs/bpl.log', {flags: 'a+'})
+      self.fileStream = self.fileStream || fs.createWriteStream('logs/wbx.log', {flags: 'a+'})
       if (!self.fileStream) {
         return
       }
