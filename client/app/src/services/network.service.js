@@ -91,18 +91,18 @@
       if (!n) {
         n = {
           mainnet: { // so far same as testnet
-            nethash: '7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3',
-            peerseed:'http://13.56.163.57:9030',
+            nethash: 'b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d',
+            peerseed:'http://165.227.239.66:9032',
             forcepeer: false,
-            token: 'BPL',
-            symbol: 'β',
-            version: 0x19,
+            token: 'WBX',
+            symbol: 'W',
+            version: 73,
             slip44: 111,
             explorer: 'http://54.183.132.15:9031/',
             // exchanges: {
             //   changer: 'bpl_BPL'
             // },
-            background: 'url(assets/images/images/BPL_background3.jpg) no-repeat ',
+            background: 'url(assets/images/images/wooba1.png) no-repeat ',
             theme: 'default',
             themeDark: false
           },
@@ -114,7 +114,7 @@
             version: 73,
             slip44: 1, // all coin testnet
             explorer: 'http://165.227.239.66:9032',
-            background: 'url(assets/images/images/BPL_background3.jpg) no-repeat ',
+            background: 'url(assets/images/images/wooba1.png) no-repeat ',
             theme: 'default',
             themeDark: false
           }

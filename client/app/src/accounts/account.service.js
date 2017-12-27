@@ -35,7 +35,7 @@
     self.peer = networkService.getPeer().ip
 
     function showTimestamp (time) { // eslint-disable-line no-unused-vars
-      var d = new Date(Date.UTC(2017, 12, 11, 13, 0, 0, 0))
+      var d = new Date(Date.UTC(1970, 0, 1, 0, 0, 0, 0));
 
       var t = parseInt(d.getTime() / 1000)
 
@@ -246,8 +246,8 @@
     }
 
     function formatTransaction (transaction, recipientAddress) {
-      var d = new Date(Date.UTC(2017, 12, 11, 13, 0, 0, 0))
-      var t = parseInt(d.getTime() / 1000)
+      var d = new Date(Date.UTC(1970, 0, 1, 0, 0, 0, 0));
+      var t = parseInt(d.getTime() / 1000);
 
       transaction.label = getTransactionLabel(transaction, recipientAddress)
       transaction.date = new Date((transaction.timestamp + t) * 1000)

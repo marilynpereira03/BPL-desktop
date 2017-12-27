@@ -18,8 +18,8 @@ body {
 }
 
 .md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
-    color: #f4e927 !important;
-    background: #f4e927 !important;
+    color: #2E7D32 !important;
+    background: #2E7D32 !important;
 }
 
 /* Track */
@@ -361,7 +361,7 @@ md-toast.error .md-toast-content {
 }
 
 md-toast.success .md-toast-content {
-    background-color: #2E8B57;
+    background-color: #2E7D32;
     font-weight: bold;
 }
 
@@ -581,7 +581,7 @@ md-toast.announcement > .md-toast-content a {
 /* Component: Empty State */
 #content .empty-state {
     text-align: center;
-    color: #d8d8d8;
+    color: gray;
     padding: 40px;
 }
 #content .empty-state .es_content_contianer {

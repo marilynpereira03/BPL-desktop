@@ -1,8 +1,8 @@
 module.exports = {
   themes: {
     'default': {
-      primary: 'blue',
-      accent: 'pink',
+      primary: 'deep-orange',
+      accent: 'green',
       warn: 'red'
     },
     'caetano': {
