@@ -18,6 +18,7 @@
     bpl.crypto.setNetworkVersion(network.version || 73)
 
     var clientVersion = require('../../package.json').version
+    var clientName = require('../../package.json').name
 
     var peer = {
       ip: network.peerseed,
