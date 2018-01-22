@@ -29,7 +29,12 @@
     }
 
     self.isAddress = function (address) {
-      return require('../node_modules/bpljs').crypto.validateAddress(address)
+      var config = require('../../config.json')
+      var Bpljs = require('bpljs')
+      var bpljs = new Bpljs({'interval': config.blocktime,
+        'delegates': config.activeDelegates,
+        'networkVersion': config.networkVersion})
+      return bpljs.crypto.validateAddress(address)
     }
 
     function existsIn (haystack, needle) {
