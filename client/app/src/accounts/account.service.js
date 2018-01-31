@@ -15,10 +15,18 @@
   function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, BPLTOSHI_UNIT) {
     var self = this
     var config = require('../config.json')
-    var Bpljs = require('bpljs')
-    var bpl = new Bpljs({'interval': config.blocktime,
-      'delegates': config.activeDelegates,
-      'networkVersion': config.networkVersion})
+    // Bpljs class - passing parameters
+    // var Bpljs = require('bpljs')
+    // var bpl = new Bpljs.BplClass({'interval': config.blocktime,
+    //   'delegates': config.activeDelegates,
+    //   'networkVersion': config.networkVersion})
+
+    // Bpljs class - default parameters
+    // var Bpljs = require('bpljs')
+    // var bpl = new Bpljs.BplClass();
+
+    // Bpljs backward compatibility
+    var bpl = require('bpljs');
 
     self.defaultFees = {
       'send': 10000000,

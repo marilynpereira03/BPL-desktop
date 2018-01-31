@@ -16,11 +16,19 @@
     }
 
     var config = require('../config.json')
-    var Bpljs = require('bpljs')
-    var bpl = new Bpljs({'interval': config.blocktime,
-      'delegates': config.activeDelegates,
-      'networkVersion': config.networkVersion})
+    // Bpljs class - passing parameters
+    // var Bpljs = require('bpljs')
+    // var bpl = new Bpljs.BplClass({'interval': config.blocktime,
+    //   'delegates': config.activeDelegates,
+    //   'networkVersion': config.networkVersion})
 
+    // Bpljs class - default parameters
+    // var Bpljs = require('bpljs')
+    // var bpl = new Bpljs.BplClass();
+
+    // Bpljs backward compatibility
+    var bpl = require('bpljs');
+    
     bpl.crypto.setNetworkVersion(network.version || config.networkVersion)
 
     var clientVersion = require('../../package.json').version
