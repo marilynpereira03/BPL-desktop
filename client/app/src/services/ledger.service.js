@@ -10,20 +10,8 @@
    */
   function LedgerService ($q, $http, $timeout, storageService, networkService) {
     var ipcRenderer = require('electron').ipcRenderer
-    var config = require('../config.json')
-    // Bpljs class - passing parameters
-    // var Bpljs = require('bpljs')
-    // var bpljs = new Bpljs.BplClass({'interval': config.blocktime,
-    //   'delegates': config.activeDelegates,
-    //   'networkVersion': config.networkVersion})
-
-    // Bpljs class - default parameters
-    // var Bpljs = require('bpljs')
-    // var bpljs = new Bpljs.BplClass();
-
-    // Bpljs backward compatibility
     var bpl = require('bpljs');
-    
+
     var bip39 = require('../node_modules/bip39')
     var async = require('async')
 

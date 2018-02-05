@@ -29,18 +29,6 @@
     }
 
     self.isAddress = function (address) {
-      var config = require('../../config.json')
-      // Bpljs class - passing parameters
-      // var Bpljs = require('bpljs')
-      // var bpljs = new Bpljs.BplClass({'interval': config.blocktime,
-      //   'delegates': config.activeDelegates,
-      //   'networkVersion': config.networkVersion})
-
-      // Bpljs class - default parameters
-      // var Bpljs = require('bpljs')
-      // var bpljs = new Bpljs.BplClass();
-
-      // Bpljs backward compatibility
       var bpljs = require('bpljs');
 
       return bpljs.crypto.validateAddress(address)
