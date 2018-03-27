@@ -86,7 +86,7 @@
             token: 'BPL',
             symbol: 'β',
             version: 0x19,
-            explorer: 'http://13.56.163.57:9031',
+            explorer: 'http://bplexp.blockpool.io',
             exchanges: {
               changer: "bpl_BPL"
             },
