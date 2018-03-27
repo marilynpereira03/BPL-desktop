@@ -32,7 +32,8 @@
   "devDependencies": {
     "angular-mocks": "^1.4.9",
     "browserify": "^13.1.1",
-    "uglify-js": "^2.7.4"
+    "uglify-js": "^3.3.16",
+    "uglify-js-es6": "^2.8.9"
   },
   "scripts": {
     "prestart": "npm update",
