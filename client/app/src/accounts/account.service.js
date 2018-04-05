@@ -14,7 +14,10 @@
    */
   function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, BPLTOSHI_UNIT) {
     var self = this
-    var bpl = require('bpljs');
+    var config = require('../config.json')
+    var bpl = require('bpljs')
+    bpl = new bpl.BplClass(config)
+
     self.defaultFees = {
       'send': 10000000,
       'vote': 100000000,

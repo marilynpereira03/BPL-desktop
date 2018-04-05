@@ -14,9 +14,10 @@
     if (!network) {
       network = switchNetwork()
     }
-    var bpl = require('bpljs');
-
-    bpl.crypto.setNetworkVersion(network.version || config.networkVersion)
+    var config = require('../config.json')
+    var bpl = require('bpljs')
+    bpl = new bpl.BplClass(config)
+    bpl.crypto.setNetworkVersion(network.version || config.pubKeyHash)
 
     var clientVersion = require('../../package.json').version
     var clientName = require('../../package.json').name
