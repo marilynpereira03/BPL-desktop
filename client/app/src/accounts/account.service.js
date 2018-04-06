@@ -14,7 +14,9 @@
    */
   function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, BPLTOSHI_UNIT) {
     var self = this
-    var bpl = require('../node_modules/bpljs')
+    var config = require('../config.json')
+    var bpl = require('bpljs')
+    bpl = new bpl.BplClass(config)
 
     self.defaultFees = {
       'send': 10000000,
@@ -35,7 +37,7 @@
     self.peer = networkService.getPeer().ip
 
     function showTimestamp (time) { // eslint-disable-line no-unused-vars
-      var d = new Date(Date.UTC(1970, 0, 1, 0, 0, 0, 0));
+      var d = new Date(Date.UTC(1970, 0, 1, 0, 0, 0, 0))
 
       var t = parseInt(d.getTime() / 1000)
 
@@ -246,7 +248,7 @@
     }
 
     function formatTransaction (transaction, recipientAddress) {
-      var d = new Date(Date.UTC(1970, 0, 1, 0, 0, 0, 0));
+      var d = new Date(Date.UTC(1970, 0, 1, 0, 0, 0, 0))
       var t = parseInt(d.getTime() / 1000);
 
       transaction.label = getTransactionLabel(transaction, recipientAddress)
