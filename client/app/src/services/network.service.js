@@ -113,7 +113,7 @@
             nethash: 'dbb912a604b286bbe2b17e4936b0f71b8cdb1d7dc4660e28118a5ed1700222f8',
             peerseed: 'http://165.227.239.66:9032',
             token: 'WBX',
-            symbol: 'W',
+            symbol: 'TW',
             version: 73,
             slip44: 1, // all coin testnet
             explorer: 'http://165.227.224.102:9032',
