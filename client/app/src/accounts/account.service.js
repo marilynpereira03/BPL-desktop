@@ -664,7 +664,6 @@
       if (difflist.length > 0) {
         assets.push(difflist)
       }
-      console.log(assets)
       return assets
     }
 

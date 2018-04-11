@@ -1111,7 +1111,6 @@
         var publicKeys = $scope.voteDialog.data.votes.map(function (delegate) {
           return delegate.vote + delegate.publicKey
         }).join(',')
-        console.log(publicKeys)
         accountService.createTransaction(3, {
           ledger: selectedAccount.ledger,
           publicKey: selectedAccount.publicKey,
