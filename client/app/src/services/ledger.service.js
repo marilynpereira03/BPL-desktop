@@ -13,7 +13,7 @@
     var bpl = require('bpljs')
     var context = storageService.getContext()
     var networks = networkService.getNetworks()
-  //  bpl = new bpl.BplClass(networks[context])
+    bpl = new bpl.BplClass(networks[context])
     var bip39 = require('../node_modules/bip39')
     var async = require('async')
 

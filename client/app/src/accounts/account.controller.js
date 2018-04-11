@@ -863,8 +863,6 @@
      */
     // TODO Used in dashboard navbar and accountBox
     function selectAccount (account) {
-      console.log("inside select account")
-      console.log(account)
       var currentaddress = account.address
       self.selected = accountService.getAccount(currentaddress)
       self.selected.ledger = account.ledger

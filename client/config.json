@@ -51,7 +51,7 @@
       "forcepeer": false,
       "messagePrefix": "BPL message:\n",
       "nethash": "f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db",
-      "peerseed": "http://34.203.200.109:9028",
+      "peerseed": "http://52.66.184.223:9028",
       "pubKeyHash": 25,
       "slip44": 1,
       "theme": "default",

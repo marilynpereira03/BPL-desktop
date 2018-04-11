@@ -32,7 +32,7 @@
       var bpljs = require('bpljs')
       var context = storageService.getContext()
       var networks = networkService.getNetworks()
-    //  bpljs = new bpl.BplClass(networks[context])
+      bpljs = new bpl.BplClass(networks[context])
       return bpljs.crypto.validateAddress(address)
     }
 

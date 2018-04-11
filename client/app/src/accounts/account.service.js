@@ -17,7 +17,7 @@
     var bpl = require('bpljs')
     var context = storageService.getContext()
     var networks = networkService.getNetworks()
-  //  bpl = new bpl.BplClass(networks[context])
+    bpl = new bpl.BplClass(networks[context])
 
     self.defaultFees = {
       'send': 10000000,
@@ -533,7 +533,6 @@
             deferred.reject(gettextCatalog.getString('Not enough token on your account ') + config.fromAddress + ', ' + gettextCatalog.getString('you need at least 10 token to register delegate'))
             return deferred.promise
           }
-          console.log(config)
           try {
             transaction = bpl.delegate.createDelegate(config.masterpassphrase, config.username, config.secondpassphrase)
           } catch (e) {

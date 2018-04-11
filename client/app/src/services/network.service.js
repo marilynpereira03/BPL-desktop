@@ -17,7 +17,7 @@
     var bpl = require('bpljs')
     var context = storageService.getContext()
     var networks = getNetworks()
-    //bpl = new bpl.BplClass(networks[context])
+    bpl = new bpl.BplClass(networks[context])
     bpl.crypto.setNetworkVersion(network.pubKeyHash || 25)
 
     var clientVersion = require('../../package.json').version
@@ -105,7 +105,6 @@
       if (reload) {
         return window.location.reload()
       }
-      console.log(">>>>>>>>>>>>> switchNetwork",n[newnetwork].network);
       return n[newnetwork].network
     }
 
