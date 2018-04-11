@@ -36,7 +36,6 @@
     connection.notify(peer)
 
     function setNetwork (name, newnetwork) {
-        console.log('********************** setNetwork',name,newnetwork);
       var n = storageService.getGlobal('networks')
       n[name] = newnetwork
       storageService.setGlobal('networks', n)
@@ -100,7 +99,7 @@
       n = storageService.getGlobal('networks')
       if (!n) {
         var config = require('../config.json')
-        n = config;
+        n = config
         storageService.setGlobal('networks', n)
       }
       if (reload) {
