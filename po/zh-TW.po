@@ -335,8 +335,8 @@ msgstr "此帳戶從未與網絡進行過互動。 這是一個冷錢包。"
 msgid "To"
 msgstr "To"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "總計{{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "總計{{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "交易"
@@ -400,4 +400,3 @@ msgstr "您需要至少1 ARK投票"
 
 msgid "you need at least 25 BPL to register delegate"
 msgstr "你需要至少25個ARK來註冊受託人"
-

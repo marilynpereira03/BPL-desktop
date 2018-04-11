@@ -1,8 +1,8 @@
-<md-dialog aria-label="{{'Send'|translate}} {{ac.network.token}}" ng-cloak md-theme="ac.currentTheme">
+<md-dialog aria-label="{{'Send'|translate}} {{ac.network.client.tokenShortName}}" ng-cloak md-theme="ac.currentTheme">
   <form name="sendBplForm" ng-submit="send.submit()">
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <h2><span>{{'Send'|translate}} {{ac.network.token}} {{'from'|translate}}</span>&nbsp;{{send.data.fromAddress}}</h2>
+        <h2><span>{{'Send'|translate}} {{ac.network.client.tokenShortName}} {{'from'|translate}}</span>&nbsp;{{send.data.fromAddress}}</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="send.cancel()">
           <md-icon md-font-library="material-icons">clear</md-icon>
@@ -28,7 +28,7 @@
 
         <div layout="row" layout-align="space-between start">
           <md-input-container class="md-block" style="width: 100%">
-            <label>{{'Amount'|translate}} ({{ac.network.token}})</label>
+            <label>{{'Amount'|translate}} ({{ac.network.client.tokenShortName}})</label>
             <input style="width: 100%" ng-model="send.data.amount" type="number" step="0.00000001" min="0.00000001" max="100000000000000" valid-amount autocomplete="off" ng-required="true" tabIndex="2">
             <div class="hint">
               {{ac.currency.symbol}} {{send.data.amount | amountToCurrency:this}}
@@ -79,7 +79,7 @@
         <div class="md-caption">
           <translate>Remaining balance</translate>
         </div>
-        <div class="balance">{{ac.network.symbol}} {{ send.remainingBalance }}</div>
+        <div class="balance">{{ac.network.client.symbol}} {{ send.remainingBalance }}</div>
       </div>
       <span flex></span>
       <md-button ng-click="send.openFile()">

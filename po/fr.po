@@ -20,8 +20,8 @@ msgstr "le possesseur du portefeuille peut démontrer qu'il possède le fichier 
 msgid "{{ category }}"
 msgstr "{{ categorie }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Envoyer'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Envoyer'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 
 msgid "Account added!"
 msgstr "Compte ajouté !"
@@ -83,8 +83,8 @@ msgstr "Toutes vos données, y compris les comptes créés, les réseaux et les 
 msgid "Amount"
 msgstr "Montant"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Montant ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Montant ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Apparence"
@@ -290,8 +290,8 @@ msgstr "Exporter le compte"
 msgid "Failed to save transaction file"
 msgstr "Échec de l'enregistrement du fichier de transaction"
 
-msgid "Fee ({{ul.network.symbol}})"
-msgstr "Frais ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
+msgstr "Frais ({{ul.network.client.symbol}})"
 
 msgid "File"
 msgstr "Fichier"
@@ -788,8 +788,8 @@ msgstr "Nom du jeton"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Total {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transaction"
@@ -892,4 +892,3 @@ msgstr "Voter n'est pas obligatoire, il permet cependant de sécuriser le foncti
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "5 BPL sont nécessaires pour pouvoir créer une deuxième phrase secrète"
-

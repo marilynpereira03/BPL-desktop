@@ -14,9 +14,10 @@
    */
   function AccountService ($q, $http, networkService, storageService, ledgerService, gettextCatalog, BPLTOSHI_UNIT) {
     var self = this
-    var config = require('../config.json')
     var bpl = require('bpljs')
-    bpl = new bpl.BplClass(config)
+    var context = storageService.getContext()
+    var networks = networkService.getNetworks()
+  //  bpl = new bpl.BplClass(networks[context])
 
     self.defaultFees = {
       'send': 10000000,
@@ -25,9 +26,8 @@
       'delegate': 1000000000,
       'multisignature': 500000000
     }
-
     self.TxTypes = {
-      0: 'Send Bpl',
+      0: 'Send '+networks[context].network.client.tokenShortName,
       1: 'Second Signature Creation',
       2: 'Delegate Registration',
       3: 'Vote',
@@ -159,7 +159,7 @@
     function createAccount (passphrase) {
       return new Promise((resolve, reject) => {
         const publicKey = bpl.crypto.getKeys(passphrase).publicKey
-        const address = bpl.crypto.getAddress(publicKey, networkService.getNetwork().version)
+        const address = bpl.crypto.getAddress(publicKey, networkService.getNetwork().pubKeyHash)
 
         fetchAccount(address).then(account => {
           if (account) {
@@ -452,7 +452,7 @@
         var account
         var transaction
         if (type === 0) { // send bpl
-          if (!bpl.crypto.validateAddress(config.toAddress, networkService.getNetwork().version)) {
+          if (!bpl.crypto.validateAddress(config.toAddress, networkService.getNetwork().pubKeyHash)) {
             deferred.reject(gettextCatalog.getString('The destination address ') + config.toAddress + gettextCatalog.getString(' is erroneous'))
             return deferred.promise
           }
@@ -487,7 +487,7 @@
               }
             )
             return deferred.promise
-          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().pubKeyHash) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
           } else {
             deferred.resolve(transaction)
@@ -522,7 +522,7 @@
               }
             )
             return deferred.promise
-          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().pubKeyHash) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
             return deferred.promise
           }
@@ -558,7 +558,7 @@
               }
             )
             return deferred.promise
-          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().pubKeyHash) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
             return deferred.promise
           }
@@ -594,7 +594,7 @@
               }
             )
             return deferred.promise
-          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().version) !== config.fromAddress) {
+          } else if (bpl.crypto.getAddress(transaction.senderPublicKey, networkService.getNetwork().pubKeyHash) !== config.fromAddress) {
             deferred.reject(gettextCatalog.getString('Passphrase is not corresponding to account ') + config.fromAddress)
             return deferred.promise
           }
@@ -694,7 +694,7 @@
 
     function createVirtual (passphrase) {
       var deferred = $q.defer()
-      var address = bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().version)
+      var address = bpl.crypto.getAddress(bpl.crypto.getKeys(passphrase).publicKey, networkService.getNetwork().pubKeyHash)
       var account = getAccount(address)
       if (account) {
         account.virtual = account.virtual || {}

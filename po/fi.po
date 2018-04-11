@@ -20,8 +20,8 @@ msgstr "- Tämä tarkoittaa, että tämän tilin haltija voi todistaa, että kys
 msgid "{{ category }}"
 msgstr "{{ kategoria }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Lähetä'|käännös}} {{ul.network.token}} {{'mistä'|käännä}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Lähetä'|käännös}} {{ul.network.client.tokenShortName}} {{'mistä'|käännä}}"
 
 msgid "Account added!"
 msgstr "Tili lisätty!"
@@ -680,8 +680,8 @@ msgstr "Poletin nimi"
 msgid "Total"
 msgstr "Yhteensä"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Yhteensä {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Yhteensä {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Tapahtuma"

@@ -20,8 +20,8 @@ msgstr "- Esto significa que el propietario de esta cuenta puede demostrar que t
 msgid "{{ category }}"
 msgstr "{{ category }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Enviar'|translate}} {{ul.network.token}} {{'de'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Enviar'|translate}} {{ul.network.client.tokenShortName}} {{'de'|translate}}"
 
 msgid "Account added!"
 msgstr "¡Cuenta adicionada!"
@@ -83,8 +83,8 @@ msgstr "Todos sus datos, incluidas las cuentas creadas, las redes y los contacto
 msgid "Amount"
 msgstr "Cantidad"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Cantidad ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Cantidad ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Apariencia"
@@ -725,8 +725,8 @@ msgstr "Nombre del token"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Total {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transacción"

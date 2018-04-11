@@ -20,8 +20,8 @@ msgstr "- Questo significa che il proprietario di questo account può dimostrare
 msgid "{{ category }}"
 msgstr "{{ categoria }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Invia'}} {{ul.network.token}} {{'da'}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Invia'}} {{ul.network.client.tokenShortName}} {{'da'}}"
 
 msgid "Account added!"
 msgstr "Account aggiunto!"
@@ -680,8 +680,8 @@ msgstr "nome token"
 msgid "Total"
 msgstr "Totale"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Totale {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Totale {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transazione"
@@ -775,4 +775,3 @@ msgstr "Votare è un meccanismo opzionale, ma importante per mantenere sicura la
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "Hai bisogno di almeno 5 BPL per creare una seconda passphrase"
-

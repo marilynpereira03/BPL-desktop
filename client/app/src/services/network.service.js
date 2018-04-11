@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   'use strict'
 
   angular.module('bplclient.services')
@@ -10,14 +10,15 @@
    */
   function NetworkService ($q, $http, $timeout, storageService, timeService, toastService) {
     var network = switchNetwork(storageService.getContext())
-
     if (!network) {
       network = switchNetwork()
     }
-    var config = require('../config.json')
+
     var bpl = require('bpljs')
-    bpl = new bpl.BplClass(config)
-    bpl.crypto.setNetworkVersion(network.version || config.pubKeyHash)
+    var context = storageService.getContext()
+    var networks = getNetworks()
+    //bpl = new bpl.BplClass(networks[context])
+    bpl.crypto.setNetworkVersion(network.pubKeyHash || 25)
 
     var clientVersion = require('../../package.json').version
     var clientName = require('../../package.json').name
@@ -30,12 +31,12 @@
       lastConnection: null,
       price: storageService.getGlobal('peerCurrencies') || { btc: '0.0' }
     }
-
     var connection = $q.defer()
 
     connection.notify(peer)
 
     function setNetwork (name, newnetwork) {
+        console.log('********************** setNetwork',name,newnetwork);
       var n = storageService.getGlobal('networks')
       n[name] = newnetwork
       storageService.setGlobal('networks', n)
@@ -60,11 +61,17 @@
           timeout: 5000
         }).then(
           function (resp) {
-            newnetwork = resp.data.network
-            newnetwork.forcepeer = data.forcepeer
-            newnetwork.peerseed = data.peerseed
-            newnetwork.slip44 = 1 // default to testnet slip44
-            newnetwork.cmcTicker = data.cmcTicker
+            let res = resp.data;
+            newnetwork = {
+              'delegates': res.config.activeDelegates,
+              'epochTime': res.config.epochTime,
+              'interval': res.config.interval,
+              'network': res.network,
+              }
+            newnetwork.network.forcepeer = data.forcepeer,
+            newnetwork.network.peerseed = data.peerseed,
+            newnetwork.network.slip44 = 1,// default to testnet slip44
+            newnetwork.network.cmcTicker = data.cmcTicker,
             n[data.name] = newnetwork
             storageService.setGlobal('networks', n)
             deferred.resolve(n[data.name])
@@ -92,46 +99,18 @@
       storageService.switchContext(newnetwork)
       n = storageService.getGlobal('networks')
       if (!n) {
-        n = {
-          mainnet: { // so far same as testnet
-            nethash: 'b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d',
-            peerseed:'http://165.227.239.66:9032',
-            forcepeer: false,
-            token: 'WBX',
-            symbol: 'W',
-            version: 73,
-            slip44: 111,
-            explorer: 'http://54.183.132.15:9031/',
-            // exchanges: {
-            //   changer: 'bpl_BPL'
-            // },
-            background: 'url(assets/images/images/wooba1.png) no-repeat ',
-            theme: 'default',
-            themeDark: false
-          },
-          testnet: {
-            nethash: 'b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d',
-            peerseed: 'http://165.227.239.66:9032',
-            token: 'WBX',
-            symbol: 'TW',
-            version: 73,
-            slip44: 1, // all coin testnet
-            explorer: 'http://165.227.239.66:9032',
-            background: 'url(assets/images/images/wooba1.png) no-repeat ',
-            theme: 'default',
-            themeDark: false
-          }
-        }
+        var config = require('../config.json')
+        n = config;
         storageService.setGlobal('networks', n)
       }
       if (reload) {
         return window.location.reload()
       }
-      return n[newnetwork]
+      console.log(">>>>>>>>>>>>> switchNetwork",n[newnetwork].network);
+      return n[newnetwork].network
     }
 
     function getNetwork () {
-      console.log('>>>>>>> getNetwork',network);
       return network
     }
 
@@ -153,7 +132,7 @@
         peer.market.isOffline = true
       }
 
-      if (!network.cmcTicker && network.token !== 'WBX') {
+      if (!network.cmcTicker && network.client.token !== 'WBX') {
         failedTicker()
         return
       }

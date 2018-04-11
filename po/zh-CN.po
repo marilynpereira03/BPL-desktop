@@ -347,8 +347,8 @@ msgstr "此帐户从未与网络进行过互动。 这是一个冷钱包。"
 msgid "To"
 msgstr "To"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "总计{{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "总计{{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "交易"
@@ -415,4 +415,3 @@ msgstr "你需要至少25个ARK来注册受托人"
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "你需要至少5ARK创建二级密码"
-

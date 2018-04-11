@@ -287,8 +287,8 @@ msgstr "Адрес получателя"
 msgid "This account has never interacted with the network. This is a cold wallet."
 msgstr "Этот счет никогда не взаимодействовали с сетью. Это холодный бумажник."
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Всего {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Всего {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Транзакция"
@@ -343,4 +343,3 @@ msgstr "Для голосования необходимо иметь хотя �
 
 msgid "you need at least 25 BPL to register delegate"
 msgstr "вам нужно как минимум 25 BPL для регистрации делегата"
-

@@ -68,8 +68,8 @@ msgstr "Todos os seus dados, incluíndo contas criadas, redes e contatos serão 
 msgid "Amount"
 msgstr "Quantidade"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Quantidade ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Quantidade ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Aparência"
@@ -272,8 +272,8 @@ msgstr "Exportar Conta"
 msgid "Failed to save transaction file"
 msgstr "Falha ao salvar arquivo de transação"
 
-msgid "Fee ({{ul.network.symbol}})"
-msgstr "Taxa ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
+msgstr "Taxa ({{ul.network.client.symbol}})"
 
 msgid "File"
 msgstr "Erro no processamento da assinatura"
@@ -704,8 +704,8 @@ msgstr "Nome do token"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Total {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transação"
@@ -796,4 +796,3 @@ msgstr "A votação é um mecanismo opcional, mas importante, que mantém a rede
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "Você precisa de pelo menos 5 BPL para criar uma segunda frase secreta"
-

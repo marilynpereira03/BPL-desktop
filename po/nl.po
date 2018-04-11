@@ -20,8 +20,8 @@ msgstr "Dit betekent dat de eigenaar van dit account kan bewijzen dat deze het b
 msgid "{{ category }}"
 msgstr "{{ category }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 
 msgid "Account added!"
 msgstr "Account toegevoegd!"
@@ -83,8 +83,8 @@ msgstr "Al je data, inclusief aangemaakte accounts, netwerken en contacten worde
 msgid "Amount"
 msgstr "Bedrag"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Bedrag ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Bedrag ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Vormgeving"
@@ -668,8 +668,8 @@ msgstr "Naam token"
 msgid "Total"
 msgstr "Totaal"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Totaal {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Totaal {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transactie"
@@ -760,4 +760,3 @@ msgstr "Stemmen is optioneel, maar een belangrijk mechanisme wat het Bpl netwerk
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "U heeft minimaal 5 BPL nodig om een tweede passphrase aan te maken"
-

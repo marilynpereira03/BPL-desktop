@@ -29,9 +29,10 @@
     }
 
     self.isAddress = function (address) {
-      var config = require('../config.json')
       var bpljs = require('bpljs')
-      bpljs = new bpl.BplClass(config)
+      var context = storageService.getContext()
+      var networks = networkService.getNetworks()
+    //  bpljs = new bpl.BplClass(networks[context])
       return bpljs.crypto.validateAddress(address)
     }
 

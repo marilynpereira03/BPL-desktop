@@ -20,8 +20,8 @@ msgstr "- Това означава, че собственика на този �
 msgid "{{ category }}"
 msgstr "{{ category }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Изпрати'|translate}} {{ul.network.token}} {{'от'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Изпрати'|translate}} {{ul.network.client.tokenShortName}} {{'от'|translate}}"
 
 msgid "Account added!"
 msgstr "Акаунта е добавен!"
@@ -680,8 +680,8 @@ msgstr "Име на токен"
 msgid "Total"
 msgstr "Общо"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Общо {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Общо {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Транзакция"

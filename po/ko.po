@@ -20,8 +20,8 @@ msgstr "이 계정의 소유자가 자신이 블록 타임스탬프에서 이 �
 msgid "{{ category }}"
 msgstr "{{카테고리}}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 
 msgid "Account added!"
 msgstr "계정이 추가되었습니다!"
@@ -83,7 +83,7 @@ msgstr "생성된 계정, 네트워크 그리고 주소록을 포함한 모든 �
 msgid "Amount"
 msgstr "양"
 
-msgid "Amount ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
 msgstr "수량"
 
 msgid "Appearance"
@@ -707,8 +707,8 @@ msgstr "토큰 이름"
 msgid "Total"
 msgstr "총"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "총 {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "총 {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "전송"
@@ -802,4 +802,3 @@ msgstr "투표는 필수사항이 아닙니다. 단, 투표는 아크 네트워�
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "2차 보안문구를 생성하기 위해서는 최소 5 BPL 가 필요합니다."
-

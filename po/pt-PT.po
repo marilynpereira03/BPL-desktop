@@ -20,8 +20,8 @@ msgstr "- Isto significa que o dono desta conta pode provar que ele tinha em sua
 msgid "{{ category }}"
 msgstr "{{ category }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 
 msgid "Account added!"
 msgstr "Conta adicionada!"
@@ -83,8 +83,8 @@ msgstr "Todos os teus registos, incluindo contas criadas, redes e contactos ser�
 msgid "Amount"
 msgstr "Montante"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Montante ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Montante ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Aspeto"
@@ -290,8 +290,8 @@ msgstr "Exportar Conta"
 msgid "Failed to save transaction file"
 msgstr "A operação de guardar o ficheiro de transação falhou"
 
-msgid "Fee ({{ul.network.symbol}})"
-msgstr "Taxa ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
+msgstr "Taxa ({{ul.network.client.symbol}})"
 
 msgid "File"
 msgstr "Ficheiro"
@@ -788,8 +788,8 @@ msgstr "Nome do Token"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Total {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transação"
@@ -892,4 +892,3 @@ msgstr "Votar, embora opcional, é um importante mecanismo que contribui para a 
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "é necessário dispor de, pelo menos, 5 BPL para criar uma segunda frase-chave"
-

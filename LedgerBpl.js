@@ -22,7 +22,6 @@ LedgerBpl.prototype.getAddress_async = function (path) {
   })
   return this.comm.exchange(buffer.toString('hex'), [0x9000]).then(function (response) {
     var result = {}
-    // console.log(response)
     response = Buffer.from(response, 'hex')
     var publicKeyLength = response[0]
     var addressLength = response[1 + publicKeyLength]
@@ -59,30 +58,21 @@ LedgerBpl.prototype.signTransaction_async = function (path, rawTxHex) {
     p1 = '80'
   }
 
-  // console.log(data1.toString("hex"))
-
   data1HeaderLength[0] = pathLength + data1.length
   data1HeaderLength[1] = splitPath.length
   if (data2) {
     data2HeaderLength[0] = data2.length
   }
 
-  // console.log("> ",data1_headerlength.toString("hex"))
-  // console.log("> ",path.toString("hex"))
-
   apdus.push('e004' + p1 + '40' + data1HeaderLength.toString('hex') + path.toString('hex') + data1.toString('hex'))
   if (data2) {
     apdus.push('e0048140' + data2HeaderLength.toString('hex') + data2.toString('hex'))
   }
-  // console.log(apdus)
   return utils.foreach(apdus, function (apdu) {
-    // console.log(apdu)
     return self.comm.exchange(apdu, [0x9000]).then(function (apduResponse) {
       response = apduResponse
-    // console.log(apduResponse)
     })
   }).then(function () {
-    // console.log(response)
     var result = {}
     result.signature = response.substring(0, response.length - 4)
     return result

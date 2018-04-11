@@ -404,7 +404,7 @@ msgstr "Αυτός ο λογαριασμός δεν έχει αλληλεπιδ�
 msgid "To"
 msgstr "Προς"
 
-msgid "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
 msgstr "Σύνολο {{ul.δίκτυο.σύμβολο}}"
 
 msgid "Transaction"

@@ -2,7 +2,7 @@
   <div class="md-toolbar-tools">
     <h2>
       <translate>My Accounts</translate>
-      {{$ctrl.ac.network.symbol}} {{$ctrl.myAccountsBalance()}}
+      {{$ctrl.ac.network.client.symbol}} {{$ctrl.myAccountsBalance()}}
       <span ng-show="$ctrl.ac.showExchangeRate()">/ {{$ctrl.myAccountsCurrencyBalance(true) | formatCurrency:$ctrl.ac:true}}</span>
     </h2>
     <span flex></span>
@@ -53,7 +53,7 @@
           {{it.username||it.address}}  <span ng-if="it.delegate">({{it.delegate.rate}})</span>
         </span>
         <span class="md-secondary">
-          {{$ctrl.ac.network.symbol}} {{it.balance | convertToBplValue}}
+          {{$ctrl.ac.network.client.symbol}} {{it.balance | convertToBplValue}}
         </span>
       </md-list-item>
     </md-list>

@@ -20,8 +20,8 @@ msgstr "- das bedeutet, dass der Besitzer dieses Accounts beweisen kann, dass er
 msgid "{{ category }}"
 msgstr "{{ Kategorie }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Senden'|übersetzen}} {{ul.network.token}} {{'von'|übersetzen}}\n"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Senden'|übersetzen}} {{ul.network.client.tokenShortName}} {{'von'|übersetzen}}\n"
 
 msgid "Account added!"
 msgstr "Account hinzugefügt!"
@@ -83,8 +83,8 @@ msgstr "Alle Daten, inklusive erstellter Accounts, Netzwerke und Kontakte, werde
 msgid "Amount"
 msgstr "Betrag"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Betrag ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Betrag ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Erscheinungsbild"
@@ -290,8 +290,8 @@ msgstr "Konto exportieren"
 msgid "Failed to save transaction file"
 msgstr "Die Transaktionsdatei konnte nicht gespeichert werden"
 
-msgid "Fee ({{ul.network.symbol}})"
-msgstr "Gebühr ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
+msgstr "Gebühr ({{ul.network.client.symbol}})"
 
 msgid "File"
 msgstr "Datei"
@@ -788,8 +788,8 @@ msgstr "Token Name"
 msgid "Total"
 msgstr "Gesamtsumme"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Gesamt {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Gesamt {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transaktion"

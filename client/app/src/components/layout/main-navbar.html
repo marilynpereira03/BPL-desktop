@@ -4,7 +4,7 @@
       <md-icon md-svg-icon="menu"></md-icon>
     </md-button>
 		<img class="logo-home" src="woooba-logo-medium.png" alt="" height="40">
-		<md-button ng-click="$ctrl.ul.selected?$ctrl.ul.selected=null:$ctrl.ul.selected=$ctrl.ul.accounts[0]"><strong>{{$ctrl.ul.network.token}} <translate>Client</translate> - {{$ctrl.ul.clientVersion}}</strong></md-button>
+		<md-button ng-click="$ctrl.ul.selected?$ctrl.ul.selected=null:$ctrl.ul.selected=$ctrl.ul.accounts[0]"><strong>{{$ctrl.ul.network.client.tokenShortName}} <translate>Client</translate> - {{$ctrl.ul.clientVersion}}</strong></md-button>
 		<md-button class="new-version-button" ng-if="$ctrl.ul.clientVersion < $ctrl.ul.latestClientVersion && $ctrl.ul.clientName = WBXClient" open-external="'https://github.com/blockpool-io/BPL-desktop/releases'" aria-label="New version available!">
 			<translate>New version available!</translate>
 		</md-button>

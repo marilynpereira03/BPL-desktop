@@ -31,10 +31,10 @@
             <b translate>Smartbridge</b> <span class="md-secondary">{{validate.transaction.vendorField}}</span>
           </md-list-item>
           <md-list-item ng-if="validate.transaction.amount">
-            <b translate>Amount ({{ul.network.symbol}})</b> <span class="md-secondary">{{validate.humanAmount}}</span>
+            <b translate>Amount ({{ul.network.client.symbol}})</b> <span class="md-secondary">{{validate.humanAmount}}</span>
           </md-list-item>
           <md-list-item>
-            <b translate>Fee ({{ul.network.symbol}})</b> <span class="md-secondary">{{validate.transaction.fee | convertToBplValue}}</span>
+            <b translate>Fee ({{ul.network.client.symbol}})</b> <span class="md-secondary">{{validate.transaction.fee | convertToBplValue}}</span>
           </md-list-item>
         </md-list>
       </div>
@@ -45,7 +45,7 @@
       </md-button>
       <span flex></span>
       <md-button class="md-raised md-primary" ng-click="validate.send()">
-        <span translate>Send</span> {{ul.network.symbol}}{{validate.totalAmount}} <span translate>now!</span>
+        <span translate>Send</span> {{ul.network.client.symbol}}{{validate.totalAmount}} <span translate>now!</span>
       </md-button>
       <md-button ng-click="validate.cancel()" style="margin-right:20px;">
         <translate>Cancel</translate>

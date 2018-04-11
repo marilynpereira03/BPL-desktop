@@ -20,7 +20,7 @@ msgstr "Ово значи, да власник рачуна може доказ�
 msgid "{{ category }}"
 msgstr "{{ категорија }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 msgstr "{{'Шаљи'|превод}} {{ul.мрежа.жетон}} {{'од'|превод}}"
 
 msgid "Account added!"
@@ -680,7 +680,7 @@ msgstr "Назив жетона"
 msgid "Total"
 msgstr "Укупно"
 
-msgid "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
 msgstr "Укупно {{ul.мрежа.симбол}"
 
 msgid "Transaction"
@@ -775,4 +775,3 @@ msgstr "Гласање је опцијски али уједно и значај
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "Потребно вам је станје најмање 5 BPL за стварање додатне лозинке"
-

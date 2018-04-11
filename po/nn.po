@@ -20,8 +20,8 @@ msgstr "- Dette betyr at eieren av denne kontoen kan bevise at han hadde den i s
 msgid "{{ category }}"
 msgstr "{{ kategori }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Send'|oversett}} {{ul.network.token}} {{'fra'|oversett}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Send'|oversett}} {{ul.network.client.tokenShortName}} {{'fra'|oversett}}"
 
 msgid "Account added!"
 msgstr "Konto lagt til!"
@@ -83,7 +83,7 @@ msgstr "Alle dine data, inkludert lagde kontoer, nettverk og kontakter vil bli f
 msgid "Amount"
 msgstr "Beløp"
 
-msgid "Amount ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
 msgstr "Beløp ({{ul.nettverk.symbol}})"
 
 msgid "Appearance"
@@ -290,7 +290,7 @@ msgstr "Eksporter konto"
 msgid "Failed to save transaction file"
 msgstr "Kunne ikke lagre transaksjonsfil"
 
-msgid "Fee ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
 msgstr "Avgift ({{ul.nettverk.symbol}})"
 
 msgid "File"
@@ -788,8 +788,8 @@ msgstr "Pollettnavn"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Total {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transaksjon"
@@ -892,4 +892,3 @@ msgstr "Å stemme er en valgfri, men viktig funksjon som holder Bpl-nettverket s
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "Du trenger minst 5 BPL for å lage en andre adgangskode"
-

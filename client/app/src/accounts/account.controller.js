@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   'use strict'
 
   angular
@@ -337,7 +337,7 @@
     }
 
     function openExplorer (uri) {
-      require('electron').shell.openExternal(self.network.explorer + uri)
+      require('electron').shell.openExternal(self.network.client.explorer + uri)
     }
 
     function formatErrorMessage (error) {
@@ -1020,14 +1020,12 @@
           }
           else{
             return 1
-          } 
+          }
           return -1
         }
         $mdDialog.hide()
         accountService.getDelegateByUsername(data.delegatename).then(
           function (delegate) {
-            console.log("******************************************");
-            console.log(indexOfDelegates(selectedAccount.selectedVotes, delegate));
             if (self.selected.selectedVotes.length < 201 && indexOfDelegates(selectedAccount.selectedVotes, delegate) < 0) {
               selectedAccount.selectedVotes.push(delegate)
             } else {
@@ -1507,7 +1505,7 @@
     }
 
     function showExchangeRate () {
-      return self.network.cmcTicker || self.network.token === 'BPL'
+      return self.network.cmcTicker || self.network.client.token === 'BLOCKPOOL'
     }
 
     function manageNetworks () {

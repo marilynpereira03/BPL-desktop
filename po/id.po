@@ -335,7 +335,7 @@ msgstr "Akun ini tidak pernah berinteraksi dengan jaringan. Ini adalah cold wall
 msgid "To"
 msgstr "Ke"
 
-msgid "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
 msgstr "Total {{ul.jaringan.simbol}}"
 
 msgid "Transaction"

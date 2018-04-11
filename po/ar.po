@@ -20,8 +20,8 @@ msgstr "- هذا يعني أن صاحب هذا الحساب يمكن أن يثب
 msgid "{{ category }}"
 msgstr "{{ الفئة }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'إرسال'|translate}} {{ul.network.token}} {{'من '|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'إرسال'|translate}} {{ul.network.client.tokenShortName}} {{'من '|translate}}"
 
 msgid "Account added!"
 msgstr "حساب مضاف!"
@@ -680,8 +680,8 @@ msgstr "اسم الرمز "
 msgid "Total"
 msgstr "المجموع"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "المجموع   {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "المجموع   {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "صفقة"

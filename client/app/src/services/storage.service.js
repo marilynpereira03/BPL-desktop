@@ -17,7 +17,7 @@
     var storage = {}
     var context = window.localStorage.getItem('context')
     if (!context) {
-      context = 'mainnet'
+      context = 'BPL-mainnet'
       window.localStorage.setItem('context', context)
     } else {
       switchContext(context)

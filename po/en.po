@@ -20,8 +20,8 @@ msgstr "- This means that the owner of this account can prove that he had in han
 msgid "{{ category }}"
 msgstr "{{ category }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
-msgstr "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
+msgstr "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 
 msgid "Account added!"
 msgstr "Account added!"
@@ -83,8 +83,8 @@ msgstr "All your data, including created accounts, networks and contacts will be
 msgid "Amount"
 msgstr "Amount"
 
-msgid "Amount ({{ul.network.symbol}})"
-msgstr "Amount ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
+msgstr "Amount ({{ul.network.client.symbol}})"
 
 msgid "Appearance"
 msgstr "Appearance"
@@ -290,8 +290,8 @@ msgstr "Export Account"
 msgid "Failed to save transaction file"
 msgstr "Failed to save transaction file"
 
-msgid "Fee ({{ul.network.symbol}})"
-msgstr "Fee ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
+msgstr "Fee ({{ul.network.client.symbol}})"
 
 msgid "File"
 msgstr "File"
@@ -788,8 +788,8 @@ msgstr "Token name"
 msgid "Total"
 msgstr "Total"
 
-msgid "Total {{ul.network.symbol}}"
-msgstr "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
+msgstr "Total {{ul.network.client.symbol}}"
 
 msgid "Transaction"
 msgstr "Transaction"

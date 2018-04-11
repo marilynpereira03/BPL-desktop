@@ -91,7 +91,7 @@ msgid "Amount"
 msgstr ""
 
 #: client/app/src/accounts/view/validateTransactionDialog.html:34
-msgid "Amount ({{ul.network.symbol}})"
+msgid "Amount ({{ul.network.client.symbol}})"
 msgstr ""
 
 #: client/app/src/accounts/view/manageBackground.html:4
@@ -362,7 +362,7 @@ msgid "Failed to save transaction file"
 msgstr ""
 
 #: client/app/src/accounts/view/validateTransactionDialog.html:37
-msgid "Fee ({{ul.network.symbol}})"
+msgid "Fee ({{ul.network.client.symbol}})"
 msgstr ""
 
 #: client/app/src/accounts/view/timestampDocument.html:33

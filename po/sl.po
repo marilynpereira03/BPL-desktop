@@ -20,7 +20,7 @@ msgstr "To pomeni, da je lastnik računa imel v posesti datoteko, ki je časovno
 msgid "{{ category }}"
 msgstr "{{ kategorija }}"
 
-msgid "{{'Send'|translate}} {{ul.network.token}} {{'from'|translate}}"
+msgid "{{'Send'|translate}} {{ul.network.client.tokenShortName}} {{'from'|translate}}"
 msgstr "{{'Pošlji'|prevedi}} {{ul.omrežni.žeton}} {{'od'|prevedi}}"
 
 msgid "Account added!"
@@ -680,7 +680,7 @@ msgstr "Naziv žetona"
 msgid "Total"
 msgstr "Skupaj"
 
-msgid "Total {{ul.network.symbol}}"
+msgid "Total {{ul.network.client.symbol}}"
 msgstr "Skupaj {{ul.omrežje.simbol}}"
 
 msgid "Transaction"
@@ -775,4 +775,3 @@ msgstr "Glasovanje je prostovoljen a pomemben vzvod, ki ohranja varnost BPL omre
 
 msgid "you need at least 5 BPL to create a second passphrase"
 msgstr "Potrebujete vsaj 5 BPL za ustvaritev drugega gesla."
-
