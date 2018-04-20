@@ -62,6 +62,11 @@ cd ark-desktop
 # Install dependencies 
 npm install
 ```
+Additional Dependencies may be required on Ubuntu 16.04 and above 
+```
+sudo apt-get install libusb-1.0-0-dev
+sudo npm install electron --verbose
+```
 
 * In some cases, [node-hid](https://github.com/node-hid/node-hid) doesn't provide pre-built binaries, so is necessary to install the [node-hid dependencies](https://github.com/node-hid/node-hid#compiling-from-source) to build them from source before running `npm install`.
 
