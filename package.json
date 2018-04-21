@@ -109,13 +109,13 @@
     "win": {
       "icon": "build/icon.ico",
       "target": [
-          {
-            "target": "nsis",
-            "arch": [
-              "x64"
-            ]
-          }
-        ]
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
     },
     "linux": {
       "description": "A Lite Client used to securely connect to the BPL network and manage your BPL assets.",
