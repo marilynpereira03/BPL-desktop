@@ -13,8 +13,8 @@
     "pack": "build --dir",
     "dist": "npm run dist:win && npm run dist:macos && npm run dist:linux && npm run dist:win32",
     "dist-quick": "npm run dist:win && npm run dist:macos && npm run dist:linux",
-    "dist:win": "build --win",
-    "dist:win32": "build --win --ia32",
+    "dist:win": "build  -w --x64",
+    "dist:win32": "build -w --ia32",
     "dist:macos": "build --macos",
     "dist:linux": "build --linux",
     "test": "karma start test/karma.conf.js --single-run",
@@ -80,8 +80,8 @@
     "chai-as-promised": "^7.1.1",
     "cross-env": "^5.0.5",
     "devtron": "^1.4.0",
-    "electron": "^1.7.9",
-    "electron-builder": "^19.35.1",
+    "electron": "^1.8.4",
+    "electron-builder": "^20.5.1",
     "electron-rebuild": "^1.6.0",
     "grunt": "~1.0.1",
     "grunt-angular-gettext": "^2.3.6",
@@ -107,8 +107,15 @@
       "category": "finance"
     },
     "win": {
-      "target": "nsis",
-      "icon": "build/icon.ico"
+      "icon": "build/icon.ico",
+      "target": [
+          {
+            "target": "nsis",
+            "arch": [
+              "x64"
+            ]
+          }
+        ]
     },
     "linux": {
       "description": "A Lite Client used to securely connect to the BPL network and manage your BPL assets.",

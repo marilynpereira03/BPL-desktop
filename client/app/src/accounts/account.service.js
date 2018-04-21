@@ -765,7 +765,7 @@
       return virtual
     }
 
-    var allowedDelegateNameChars = /^[a-z0-9!@$&_.]+$/g
+    var allowedDelegateNameChars = /^[a-z0-9!@$&_.]+$/
 
     function sanitizeDelegateName (delegateName) {
       if (!delegateName) {
