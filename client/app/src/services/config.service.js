@@ -1,37 +1,37 @@
-;(function () {
-  'use strict'
+(function () {
+	'use strict'
 
-  angular.module('bplclient.services')
-    .service('configService', [ConfigService])
+	angular.module('bplclient.services')
+		.service('configService', [ConfigService])
 
-  /**
+	/**
    * ConfigService
    * @constructor
    */
-  function ConfigService () {
-    var self = this
+	function ConfigService () {
+		var self = this
 
-    self.config = require('./config/config.js')
+		self.config = require('./config/config.js')
 
-    function getByGroup (group) {
-      if (self.config[group]) {
-        return self.config[group]
-      }
+		function getByGroup (group) {
+			if (self.config[group]) {
+				return self.config[group]
+			}
 
-      return null
-    }
+			return null
+		}
 
-    function getByGroupAndKey (group, key) {
-      if (self.config[group] && self.config[group][key]) {
-        return self.config[group][key]
-      }
+		function getByGroupAndKey (group, key) {
+			if (self.config[group] && self.config[group][key]) {
+				return self.config[group][key]
+			}
 
-      return null
-    }
+			return null
+		}
 
-    return {
-      getByGroup: getByGroup,
-      getByGroupAndKey: getByGroupAndKey
-    }
-  }
+		return {
+			getByGroup: getByGroup,
+			getByGroupAndKey: getByGroupAndKey
+		}
+	}
 })()
